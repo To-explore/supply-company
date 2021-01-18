@@ -1,0 +1,74 @@
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #04084f;
+}
+.top-nav .center {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.top-nav .center .logo-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.top-nav .center .logo-box img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.top-nav .center .logo-box .title-text {
+  font-size: 16px;
+  font-family: "Ma Shan Zheng", cursive;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.top-nav .center .content-box {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.top-nav .center .content-box .content-ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.top-nav .center .content-box .content-ul li {
+  width: 80px;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+.top-nav .center .content-box .content-ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Noto Sans SC", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+.top-nav .center .content-box .content-ul li a:hover {
+  color: #ff9797;
+}
+.top-nav .center .content-box .content-ul .active a {
+  color: #e64e4e;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  line-height: 40vh;
+  color: #fac44e;
+  font-size: 60px;
+  background-color: cadetblue;
+}
