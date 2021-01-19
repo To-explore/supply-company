@@ -1,0 +1,23 @@
+@mixin label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .label {
+    margin: 0 auto;
+    border-radius: 50px;
+    width: 100px;
+    height: 33px;
+    background: #e64e4e;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  span {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+}

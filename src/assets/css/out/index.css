@@ -63,11 +63,185 @@
   color: #e64e4e;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2em;
+  width: 6px;
+  background: rgba(16, 31, 28, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  min-height: 28px;
+  background-color: rgba(16, 31, 28, 0.5);
+  background-clip: padding-box;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #101f1c;
+}
+
 .swiper-container {
   width: 100%;
-  height: 400px;
+  height: 250px;
   text-align: center;
 }
 .swiper-container img {
   width: 100%;
+  height: 250px;
+}
+
+.box-introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+  height: 350px;
+}
+.box-introduction .img-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.box-introduction .img-box img {
+  margin-right: 85px;
+  width: 200px;
+  height: 200px;
+}
+.box-introduction .description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.box-introduction .description-box .label-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-introduction .description-box .label-box .label {
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 100px;
+  height: 33px;
+  background: #e64e4e;
+  line-height: 33px;
+  text-align: center;
+}
+.box-introduction .description-box .label-box span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+.box-introduction .description-box .text-box {
+  margin-top: 15px;
+  width: 470px;
+}
+.box-introduction .description-box .text-box p {
+  line-height: 18px;
+  text-indent: 25px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.box-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+  height: 250px;
+}
+.box-features .description-box {
+  flex: 1;
+  height: 100%;
+}
+.box-features .description-box .label-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-features .description-box .label-box .label {
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 100px;
+  height: 33px;
+  background: #e64e4e;
+  line-height: 33px;
+  text-align: center;
+}
+.box-features .description-box .label-box span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+.box-features .description-box ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.box-features .description-box ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box-features .description-box ul li .li-left {
+  margin-right: 10px;
+}
+.box-features .description-box ul li .li-left img {
+  width: 23px;
+  height: 20px;
+}
+.box-features .description-box ul li .li-rigth {
+  width: 155px;
+}
+.box-features .description-box ul li .li-rigth p {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  color: #333;
+}
+.box-features .description-box ul li .li-rigth span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 7px;
+  color: #666;
+}
+.box-features .img-box {
+  flex: 1;
+  height: 100%;
+}
+.box-features .img-box img {
+  width: 221px;
+  height: 259px;
+}
+
+.box-advantage {
+  margin: 0 auto;
+  width: 1200px;
+  height: 700px;
 }
