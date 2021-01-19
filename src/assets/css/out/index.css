@@ -2,6 +2,9 @@
   width: 100%;
   height: 50px;
   background-color: #04084f;
+  position: fixed;
+  top: 0px;
+  z-index: 99999;
 }
 .top-nav .center {
   width: 80%;
@@ -30,6 +33,22 @@
   font-weight: 400;
   color: #ffffff;
   letter-spacing: 1px;
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  width: 36ch;
+  font-family: "Ma Shan Zheng", cursive;
+  white-space: nowrap;
+  animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+}
+@keyframes caret {
+  50% {
+    border-right-color: currentColor;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 .top-nav .center .content-box {
   flex: 1;
@@ -90,6 +109,7 @@
 }
 
 .swiper-container {
+  margin-top: 50px;
   width: 100%;
   height: 250px;
   text-align: center;
@@ -106,7 +126,7 @@
   align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 350px;
+  height: 400px;
 }
 .box-introduction .img-box {
   display: flex;
@@ -163,26 +183,33 @@
   letter-spacing: 1px;
 }
 
-.box-features {
+.features-section {
+  background: #f2f2f4;
+}
+.features-section .box-features {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 250px;
+  height: 350px;
 }
-.box-features .description-box {
-  flex: 1;
+.features-section .box-features .description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
   height: 100%;
 }
-.box-features .description-box .label-box {
+.features-section .box-features .description-box .label-box {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.box-features .description-box .label-box .label {
+.features-section .box-features .description-box .label-box .label {
   margin: 0 auto;
   border-radius: 50px;
   width: 100px;
@@ -191,57 +218,214 @@
   line-height: 33px;
   text-align: center;
 }
-.box-features .description-box .label-box span {
+.features-section .box-features .description-box .label-box span {
   font-family: "Noto Sans SC", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #fff;
 }
-.box-features .description-box ul {
+.features-section .box-features .description-box ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.box-features .description-box ul li {
+.features-section .box-features .description-box ul li {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 10px;
+  width: 260px;
 }
-.box-features .description-box ul li .li-left {
+.features-section .box-features .description-box ul li .li-left {
   margin-right: 10px;
+  height: 100%;
 }
-.box-features .description-box ul li .li-left img {
-  width: 23px;
-  height: 20px;
+.features-section .box-features .description-box ul li .li-left img {
+  width: 33px;
+  height: 30px;
 }
-.box-features .description-box ul li .li-rigth {
+.features-section .box-features .description-box ul li .li-rigth {
   width: 155px;
 }
-.box-features .description-box ul li .li-rigth p {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 8px;
-  color: #333;
+.features-section .box-features .description-box ul li .li-rigth .title-text {
+  display: block;
+  font-size: 14px;
+  color: black;
 }
-.box-features .description-box ul li .li-rigth span {
+.features-section .box-features .description-box ul li .li-rigth span {
   font-family: "Noto Sans SC", sans-serif;
   font-weight: 500;
-  font-size: 7px;
+  font-size: 12px;
   color: #666;
 }
-.box-features .img-box {
+.features-section .box-features .img-box {
+  position: relative;
   flex: 1;
   height: 100%;
 }
-.box-features .img-box img {
+.features-section .box-features .img-box img {
+  position: absolute;
+  top: -25px;
   width: 221px;
   height: 259px;
 }
 
 .box-advantage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 700px;
+  height: 450px;
+}
+.box-advantage .label-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-advantage .label-box .label {
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 100px;
+  height: 33px;
+  background: #e64e4e;
+  line-height: 33px;
+  text-align: center;
+}
+.box-advantage .label-box span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+.box-advantage .tab-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+}
+.box-advantage .tab-box .tab-article {
+  border-radius: 5px;
+  width: 220px;
+  height: 250px;
+  background: #fff;
+  transition: all 0.5s;
+}
+.box-advantage .tab-box .tab-article:hover {
+  box-shadow: 0 0 20px 0 rgba(4, 8, 79, 0.07);
+}
+.box-advantage .tab-box .tab-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.box-advantage .tab-box .tab-img img {
+  width: 200px;
+}
+.box-advantage .tab-box .tab-title {
+  text-align: center;
+}
+.box-advantage .tab-box .tab-title span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #000;
+}
+.box-advantage .tab-box hr {
+  border-style: none;
+  border-radius: 50px;
+  width: 50px;
+  height: 2px;
+  background-color: #e64e4e;
+}
+.box-advantage .tab-box .tab-content {
+  text-align: center;
+}
+.box-advantage .tab-box .tab-content span {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.last {
+  background-image: url("https://supply-company.oss-cn-shanghai.aliyuncs.com/image/footer.png");
+  background-repeat: no-repeat;
+  background-position-x: -2px;
+  background-size: 100.2%;
+}
+.last .last-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 750px;
+  height: 200px;
+}
+.last .last-box .button-box {
+  margin-right: 170px;
+  margin-top: 50px;
+}
+.last .last-box .button-box .operation {
+  border-style: none;
+  border-radius: 50px;
+  width: 140px;
+  height: 40px;
+  outline: none;
+  background: #e64e4e;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+.last .last-box .button-box .operation img {
+  width: 20px;
+  height: 20px;
+}
+.last .last-box .button-box .operation:hover {
+  background-color: #e64e4e;
+  opacity: 0.85;
+}
+.last .last-box .button-box .operation:active {
+  border-style: none;
+  border-radius: 50px;
+  width: 140px;
+  height: 40px;
+  background: #e64e4e;
+  opacity: 0.7;
+  color: #fff;
+}
+.last .last-box .content-box {
+  margin-top: 20px;
+  width: 300px;
+}
+.last .last-box .content-box span {
+  border-radius: 50px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 100;
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.record-information {
+  width: 100%;
+  height: 50px;
+  background-color: #04084f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record-information span {
+  font-size: 10px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
 }

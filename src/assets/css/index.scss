@@ -32,6 +32,7 @@
 }
 
 .swiper-container {
+  margin-top: 50px;
   width: 100%;
   height: 250px;
   text-align: center;
@@ -49,7 +50,7 @@
   align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 350px;
+  height: 400px;
 
   .img-box {
     display: flex;
@@ -93,73 +94,230 @@
     }
   }
 }
+.features-section {
+  background: #f2f2f4;
 
-.box-features {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 1200px;
-  height: 250px;
+  .box-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1200px;
+    height: 350px;
 
-  .description-box {
-    flex: 1;
-    height: 100%;
-    .label-box {
-      // 使用混入
-      @include label;
-    }
-    ul {
+    .description-box {
       display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      li {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+      height: 100%;
+      .label-box {
+        // 使用混入
+        @include label;
+      }
+      ul {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 10px;
+          width: 260px;
 
-        .li-left {
-          margin-right: 10px;
-          img {
-            width: 23px;
-            height: 20px;
+          .li-left {
+            margin-right: 10px;
+            height: 100%;
+            img {
+              width: 33px;
+              height: 30px;
+            }
           }
-        }
-        .li-rigth {
-          width: 155px;
-          p {
-            font-family: "Noto Sans SC", sans-serif;
-            font-weight: 500;
-            font-size: 8px;
-            color: #333;
-          }
-          span {
-            font-family: "Noto Sans SC", sans-serif;
-            font-weight: 500;
-            font-size: 7px;
-            color: #666;
+          .li-rigth {
+            width: 155px;
+            .title-text {
+              display: block;
+              font-size: 14px;
+              color: black;
+            }
+            span {
+              font-family: "Noto Sans SC", sans-serif;
+              font-weight: 500;
+              font-size: 12px;
+              color: #666;
+            }
           }
         }
       }
     }
-  }
 
-  .img-box {
-    flex: 1;
-    height: 100%;
+    .img-box {
+      position: relative;
+      flex: 1;
+      height: 100%;
 
-    img {
-      width: 221px;
-      height: 259px;
+      img {
+        position: absolute;
+        top: -25px;
+        width: 221px;
+        height: 259px;
+      }
     }
   }
 }
 
 .box-advantage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 700px;
+  height: 450px;
+
+  .label-box {
+    @include label;
+  }
+
+  .tab-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+
+    .tab-article {
+      border-radius: 5px;
+      width: 220px;
+      height: 250px;
+      background: #fff;
+      transition: all 0.5s;
+    }
+
+    .tab-article:hover {
+      box-shadow: 0 0 20px 0 rgba(4, 8, 79, 0.07);
+    }
+
+    .tab-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .tab-title {
+      text-align: center;
+      span {
+        font-family: "Noto Sans SC", sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        color: #000;
+      }
+    }
+    hr {
+      border-style: none;
+      border-radius: 50px;
+      width: 50px;
+      height: 2px;
+      background-color: $hr-color;
+    }
+    .tab-content {
+      text-align: center;
+      span {
+        font-family: "Noto Sans SC", sans-serif;
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+}
+
+.last {
+  background-image: url("https://supply-company.oss-cn-shanghai.aliyuncs.com/image/footer.png");
+  background-repeat: no-repeat;
+  background-position-x: -2px;
+  background-size: 100.2%;
+  .last-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 750px;
+    height: 200px;
+    .button-box {
+      margin-right: 170px;
+      margin-top: 50px;
+      .operation {
+        border-style: none;
+        border-radius: 50px;
+        width: 140px;
+        height: 40px;
+        outline: none;
+        background: $hr-color;
+        font-family: "Noto Sans SC", sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 2px;
+        line-height: 40px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .operation:hover {
+        background-color: $hr-color;
+        opacity: 0.85; //这里重要，就是通过这个透明度来设置
+      }
+
+      .operation:active {
+        border-style: none;
+        border-radius: 50px;
+        width: 140px;
+        height: 40px;
+        background: $hr-color;
+        opacity: 0.7; //这里重要，就是通过这个透明度来设置
+        color: #fff;
+      }
+    }
+
+    .content-box {
+      margin-top: 20px;
+      width: 300px;
+      span {
+        border-radius: 50px;
+        font-family: "Noto Sans SC", sans-serif;
+        font-weight: 100;
+        font-size: 10px;
+        color: #fff;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.record-information {
+  width: 100%;
+  height: 50px;
+  background-color: $nav-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 10px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+  }
 }

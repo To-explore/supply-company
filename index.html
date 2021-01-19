@@ -1,6 +1,6 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-19 09:08:55
+ * @LastEditTime: 2021-01-19 16:57:28
 -->
 <!doctype html>
 <html lang="en">
@@ -29,7 +29,7 @@
     <div class="center">
       <div class="logo-box">
         <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" alt="公司logo">
-        <span class="title-text">中商云产业链供应链管理平台</span>
+        <div class="title-text">中商云产业链 供应链管理平台</div>
       </div>
       <div class="content-box">
         <ul class="content-ul">
@@ -90,7 +90,7 @@
   </section>
 
   <!-- 核心功能 -->
-  <section>
+  <section class="features-section">
     <div class="box-features">
       <div class="description-box">
         <div class="label-box">
@@ -105,7 +105,7 @@
                 <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">销售</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -113,10 +113,10 @@
             </li>
             <li>
               <div class="li-left">
-                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
+                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/purchase.png" alt="采购图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">采购</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -124,10 +124,10 @@
             </li>
             <li>
               <div class="li-left">
-                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
+                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/dispatchCar.png" alt="派车图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">派车</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -135,10 +135,10 @@
             </li>
             <li>
               <div class="li-left">
-                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
+                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/ship.png" alt="发货图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">发货</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -146,10 +146,10 @@
             </li>
             <li>
               <div class="li-left">
-                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
+                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/warehouse.png" alt="仓库图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">仓库</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -157,10 +157,10 @@
             </li>
             <li>
               <div class="li-left">
-                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Sales.png" alt="销售图标">
+                <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/Finance.png" alt="财务图标">
               </div>
               <div class="li-rigth">
-                <p>销售</p>
+                <span class="title-text">财务</span>
                 <span>
                   创建销售订单，并对销售订单车辆收货。
                 </span>
@@ -177,10 +177,95 @@
 
   <!-- 产品优势 -->
   <section>
-    <div class="box-advantage"></div>
+    <div class="box-advantage">
+      <div class="label-box">
+        <div class="label">
+          <span>核心功能</span>
+        </div>
+      </div>
+      <div class="tab-box">
+        <article class="tab-article">
+          <div class="tab-img">
+            <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/index_two.png" alt="展示图片">
+          </div>
+          <div class="tab-title">
+            <span>
+              简介易上手，操作方便
+            </span>
+          </div>
+          <hr />
+          <div class="tab-content">
+            <span>
+              打开Web、手机浏览器，随时随地查看各类业务订单，
+              并对订单进行相关操作。
+            </span>
+          </div>
+        </article>
+        <article class="tab-article">
+          <div class="tab-img">
+            <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/index_three.png" alt="展示图片">
+          </div>
+          <div class="tab-title">
+            <span>
+              覆盖面广，功能强大
+            </span>
+          </div>
+          <hr />
+          <div class="tab-content">
+            <span>
+              面向不同地区、面向不同角色；
+              强调了销售、采购、物流专员、发货和收货之间的关系；
+              支持企业后勤管理。
+            </span>
+          </div>
+        </article>
+        <article class="tab-article">
+          <div class="tab-img">
+            <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/index_four.png" alt="展示图片">
+          </div>
+          <div class="tab-title">
+            <span>
+              大数据集合，全流程业务管控
+            </span>
+          </div>
+          <hr />
+          <div class="tab-content">
+            <span>
+              销售、采购、派车、发货和物流业务一体化；
+              实时获取、存储、管理业务数据，
+              并进行数据分析和统计。
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <footer></footer>
+  <section class="last">
+    <div class="last-box">
+      <div class="button-box">
+        <a href="/src/page/operationManual.html">
+          <button class="operation">
+            操作手册
+            <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/icons/right.png" alt="箭头图标">
+          </button>
+        </a>
+      </div>
+      <div class="content-box">
+        <span>
+          想了解而更多?点击按钮去获取操作手册吧!
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="record-information">
+      <span>
+        @沪ICP备265655215号
+      </span>
+    </div>
+  </footer>
 </body>
 <!-- Swiper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
