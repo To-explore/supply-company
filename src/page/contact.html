@@ -10,9 +10,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/icons/logo.ico">
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet"> -->
   <!-- Normalize -->
+  <link rel="stylesheet" href="../assets/css/out/common.css">
   <link rel="stylesheet" href="../assets/css/out/Normalize.css">
   <!-- My css -->
   <link rel="stylesheet" href="../assets/css/out/contact.css">
@@ -24,12 +25,12 @@
     <div class="center">
       <div class="logo-box">
         <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" alt="公司logo">
-        <span class="title-text">中商云产业链供应链管理平台</span>
+        <span class="title-text">中商云产业链 供应链管理平台</span>
       </div>
       <div class="content-box">
         <ul class="content-ul">
           <li>
-            <a href="/index.html">首页</a>
+            <a href="../../index.html">首页</a>
           </li>
           <li>
             <a href="Introduction.html">功能介绍</a>
@@ -47,8 +48,53 @@
       </div>
     </div>
   </nav>
-  <h1>我是联系我们页面</h1>
-  <footer></footer>
+  <!-- banner图 -->
+  <div class="banner"></div>
+
+    
+  <div class="content">
+    <div class="content-feedback">
+        <div class="feedback-top">
+            <div class="feedback-img">
+                <img src="../assets/image/contact/question.png">
+            </div>
+        </div>
+        <form class="feedback-form">
+            <div class="form-label">
+                <label>*姓名</label>
+                <input placeholder="请输入姓名" type="text" id="name" name="name">
+            </div>
+            <div class="form-label">
+                <label>*电话</label>
+                <input placeholder="请输入电话号码" type="text" id="phone" name="phone">
+            </div>
+            <div class="form-label">
+                <label>*功能</label>
+                <select name="modular" >
+                    <option>请选择要反馈的功能模块</option>
+                    <option value="aaa">aaa</option>
+                    <option value="bbb">bbb</option>
+                    <option value="ccc">ccc</option>
+                </select>
+            </div>
+            <div class="form-label">
+                <label class="textarea-label">*描述</label>
+                <textarea  placeholder="请输入问题描述" name="describe" id="describe">
+                </textarea>
+            </div>
+        </form>
+    </div>
+  </div>
+
+  <!-- footer start -->
+  <footer>
+    <div class="record-information">
+      <span>
+        @沪ICP备265655215号
+      </span>
+    </div>
+  </footer>
+  <!-- footer end -->
 </body>
 
 </html>
