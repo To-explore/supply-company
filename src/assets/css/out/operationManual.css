@@ -2,6 +2,9 @@
   width: 100%;
   height: 50px;
   background-color: #04084f;
+  position: fixed;
+  top: 0px;
+  z-index: 99999;
 }
 .top-nav .center {
   width: 80%;
@@ -30,6 +33,22 @@
   font-weight: 400;
   color: #ffffff;
   letter-spacing: 1px;
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  width: 36ch;
+  font-family: "Ma Shan Zheng", cursive;
+  white-space: nowrap;
+  animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+}
+@keyframes caret {
+  50% {
+    border-right-color: currentColor;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 .top-nav .center .content-box {
   flex: 1;
@@ -61,4 +80,254 @@
 }
 .top-nav .center .content-box .content-ul .active a {
   color: #e64e4e;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2em;
+  width: 6px;
+  background: rgba(16, 31, 28, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  min-height: 28px;
+  background-color: rgba(16, 31, 28, 0.5);
+  background-clip: padding-box;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #101f1c;
+}
+
+.banner {
+  width: 100%;
+  height: 243px;
+  background: url("../../image/operationManual/banner.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.content {
+  width: 100%;
+}
+.content .content-hover {
+  width: 1200px;
+  height: 2232px;
+  margin: -125px auto 101px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  padding-top: 49px;
+}
+.content .content-hover .contenthov-title {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #04084F;
+  font-size: 18px;
+}
+.content .content-hover .contenthov-title .title-left {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: 100px;
+  height: 1px;
+  background-color: #04084F;
+  position: relative;
+  margin-right: 13px;
+}
+.content .content-hover .contenthov-title .title-left .title-leftone {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: #04084F;
+  position: absolute;
+  top: 3px;
+  left: 20px;
+}
+.content .content-hover .contenthov-title .title-left .title-leftone::after {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #04084F;
+  position: absolute;
+  right: 0;
+  top: -1.5px;
+}
+.content .content-hover .contenthov-title .title-left::after {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #04084F;
+  position: absolute;
+  right: 0;
+  top: -1.5px;
+}
+.content .content-hover .contenthov-title .title-right {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: 100px;
+  height: 1px;
+  background-color: #04084F;
+  position: relative;
+  margin-left: 13px;
+}
+.content .content-hover .contenthov-title .title-right .title-rightone {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: #04084F;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+.content .content-hover .contenthov-title .title-right .title-rightone::before {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #04084F;
+  position: absolute;
+  left: 0;
+  top: -1.5px;
+}
+.content .content-hover .contenthov-title .title-right::before {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #04084F;
+  position: absolute;
+  left: 0;
+  top: -1.5px;
+}
+.content .content-hover .content-talk {
+  margin-top: 8px;
+  padding-left: 89px;
+  padding-right: 71px;
+}
+.content .content-hover .content-talk li {
+  margin-top: 50px;
+  width: 100%;
+  height: 304px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .content-hover .content-talk li .talk-bgcblue {
+  background: url("../../image/operationManual/bgcBlue.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-bgcred {
+  background: url("../../image/operationManual/bgcRed.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-bgcdark {
+  background: url("../../image/operationManual/bgcDarkGreen.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-bgcyellow {
+  background: url("../../image/operationManual/bgcYellow.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-bgcgreen {
+  background: url("../../image/operationManual/bgcGreen.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-bgcviolet {
+  background: url("../../image/operationManual/bgcViolet.png") no-repeat center center;
+}
+.content .content-hover .content-talk li .talk-repeat {
+  width: 871px;
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgcpeopleL {
+  position: absolute;
+  left: 27px;
+  bottom: -28px;
+  width: 102px;
+  height: 182px;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgcpeopleL img {
+  width: 100%;
+  height: 100%;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgcpeopleR {
+  position: absolute;
+  right: 27px;
+  bottom: -28px;
+  width: 102px;
+  height: 182px;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgcpeopleR img {
+  width: 100%;
+  height: 100%;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleL {
+  margin: 80px 153px 105px 170px;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleL .talk-download {
+  margin-top: 30px;
+  width: 151px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #E64E4E;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleL .talk-download img {
+  width: 13px;
+  height: 13px;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleR {
+  margin: 80px 153px 105px 170px;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleR .talk-download {
+  float: right;
+  margin-top: 30px;
+  width: 151px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #E64E4E;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.content .content-hover .content-talk li .talk-repeat .talk-bgctitleR .talk-download img {
+  width: 13px;
+  height: 13px;
+}
+.content .content-hover .content-talk li .talk-avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  margin: auto 0;
+}
+.content .content-hover .content-talk li .talk-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.record-information {
+  width: 100%;
+  height: 50px;
+  background-color: #04084f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record-information span {
+  font-size: 10px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
 }
