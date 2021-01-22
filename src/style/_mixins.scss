@@ -1,0 +1,33 @@
+@mixin label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .label {
+    margin: 0 auto;
+    border-radius: 50px;
+    width: 100px;
+    height: 33px;
+    background: #e64e4e;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  span {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+@mixin typing($count: 10, $duration: 0, $delay: 0) {
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  width: #{$count + 1}ch;
+  font-family: "Ma Shan Zheng", cursive;
+  white-space: nowrap;
+  animation: typing #{$duration}s steps($count + 1) #{$delay}s infinite backwards,
+    caret 500ms steps(1) #{$delay}s infinite forwards;
+}

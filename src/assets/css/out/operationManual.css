@@ -5,6 +5,7 @@
   position: fixed;
   top: 0px;
   z-index: 99999;
+  font-size: 14px;
 }
 .top-nav .center {
   width: 80%;
@@ -54,6 +55,7 @@
   flex: 1;
   display: flex;
   flex-direction: row;
+  font-size: 14px;
 }
 .top-nav .center .content-box .content-ul {
   width: 100%;

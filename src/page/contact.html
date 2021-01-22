@@ -59,7 +59,7 @@
                 <img src="../assets/image/contact/question.png">
             </div>
         </div>
-        <form class="feedback-form">
+        <div class="feedback-form" id="form">
             <div class="form-label">
                 <label>*姓名</label>
                 <input placeholder="请输入姓名" type="text" id="name" name="name">
@@ -70,7 +70,7 @@
             </div>
             <div class="form-label">
                 <label>*功能</label>
-                <select name="modular" >
+                <select name="modular" id="modular">
                     <option>请选择要反馈的功能模块</option>
                     <option value="aaa">aaa</option>
                     <option value="bbb">bbb</option>
@@ -82,10 +82,33 @@
                 <textarea  placeholder="请输入问题描述" name="describe" id="describe">
                 </textarea>
             </div>
-        </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button onclick="beforeSubmit()">提交</button>
+            <script type="text/javascript">
+              var Form = document.getElementById('form');
+              function beforeSubmit() {
+                  alert('暂未开发此功能，请期待后续更新！')
+                  // var name = document.getElementById('name').value;
+                  // var phone = document.getElementById('phone').value;
+                  // var modular = document.getElementById('modular').value;
+                  // var describe = document.getElementById('describe').value;
+                  // if (name == "" || phone == "" || modular == "" || describe == "") {
+                  //   alert('每一项不能为空！');
+                  //   return;
+                  // } else {
+                  //   Form.submit();
+                  // }
+              }
+            </script>
+        </div>
     </div>
   </div>
-
+  <script>
+  </script>
   <!-- footer start -->
   <footer>
     <div class="record-information">
