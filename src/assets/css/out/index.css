@@ -5,6 +5,7 @@
   position: fixed;
   top: 0px;
   z-index: 99999;
+  font-size: 14px;
 }
 .top-nav .center {
   width: 80%;
@@ -54,6 +55,7 @@
   flex: 1;
   display: flex;
   flex-direction: row;
+  font-size: 14px;
 }
 .top-nav .center .content-box .content-ul {
   width: 100%;
@@ -111,12 +113,12 @@
 .swiper-container {
   margin-top: 50px;
   width: 100%;
-  height: 250px;
+  height: 450px;
   text-align: center;
 }
 .swiper-container img {
   width: 100%;
-  height: 250px;
+  height: 100%;
 }
 
 .box-introduction {
@@ -126,7 +128,7 @@
   align-items: center;
   margin: 0 auto;
   width: 1200px;
-  height: 400px;
+  height: 579px;
 }
 .box-introduction .img-box {
   display: flex;
@@ -136,222 +138,166 @@
   height: 100%;
 }
 .box-introduction .img-box img {
-  margin-right: 85px;
-  width: 200px;
-  height: 200px;
+  margin-right: 168px;
+  width: 314px;
+  height: 313px;
 }
 .box-introduction .description-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  height: 100%;
+  width: 579px;
 }
 .box-introduction .description-box .label-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.box-introduction .description-box .label-box .label {
-  margin: 0 auto;
-  border-radius: 50px;
-  width: 100px;
-  height: 33px;
-  background: #e64e4e;
-  line-height: 33px;
+  width: 144px;
+  height: 46px;
+  line-height: 46px;
   text-align: center;
-}
-.box-introduction .description-box .label-box span {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-size: 19px;
   color: #fff;
+  background-color: #E64E4E;
+  border-radius: 30px;
+  margin: 0 auto 30px;
 }
 .box-introduction .description-box .text-box {
-  margin-top: 15px;
-  width: 470px;
+  font-size: 14px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: #333;
 }
 .box-introduction .description-box .text-box p {
   line-height: 18px;
   text-indent: 25px;
-  font-family: "Noto Sans SC", sans-serif;
   font-weight: 400;
-  font-size: 8px;
-  color: #333;
   letter-spacing: 1px;
 }
 
 .features-section {
-  background: #f2f2f4;
+  width: 100%;
+  background-color: #F2F2F4;
+  position: relative;
+}
+.features-section .img-box {
+  width: 442px;
+  height: 518px;
+  position: absolute;
+  right: 405px;
+  top: -51px;
+}
+.features-section .img-box img {
+  width: 100%;
+  height: 100%;
 }
 .features-section .box-features {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 1200px;
-  height: 350px;
+  width: 663px;
+  height: 404px;
+  margin-left: 21%;
+  padding-top: 63px;
 }
-.features-section .box-features .description-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 2;
-  height: 100%;
-}
-.features-section .box-features .description-box .label-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.features-section .box-features .description-box .label-box .label {
-  margin: 0 auto;
-  border-radius: 50px;
-  width: 100px;
-  height: 33px;
-  background: #e64e4e;
-  line-height: 33px;
+.features-section .box-features .label-box {
+  width: 144px;
+  height: 46px;
+  line-height: 46px;
   text-align: center;
-}
-.features-section .box-features .description-box .label-box span {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-size: 19px;
   color: #fff;
+  background-color: #E64E4E;
+  border-radius: 30px;
+  margin: 0 auto;
 }
-.features-section .box-features .description-box ul {
+.features-section .box-features .ul-box {
+  margin-top: 37px;
+  width: 100%;
+}
+.features-section .box-features .ul-box .li-box {
+  width: 50%;
+  height: 70px;
+  float: left;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin-bottom: 30px;
 }
-.features-section .box-features .description-box ul li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 260px;
+.features-section .box-features .ul-box .li-box .box-img {
+  width: 47px;
+  height: 47px;
+  margin-top: 5px;
 }
-.features-section .box-features .description-box ul li .li-left {
-  margin-right: 10px;
+.features-section .box-features .ul-box .li-box .box-img img {
+  width: 100%;
   height: 100%;
 }
-.features-section .box-features .description-box ul li .li-left img {
-  width: 33px;
-  height: 30px;
-}
-.features-section .box-features .description-box ul li .li-rigth {
-  width: 155px;
-}
-.features-section .box-features .description-box ul li .li-rigth .title-text {
-  display: block;
-  font-size: 14px;
-  color: black;
-}
-.features-section .box-features .description-box ul li .li-rigth span {
+.features-section .box-features .ul-box .li-box .box-content {
+  margin-left: 20px;
   font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  color: #666;
 }
-.features-section .box-features .img-box {
-  position: relative;
-  flex: 1;
-  height: 100%;
+.features-section .box-features .ul-box .li-box .box-content .boxcontent-title {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 550;
 }
-.features-section .box-features .img-box img {
-  position: absolute;
-  top: -25px;
-  width: 221px;
-  height: 259px;
+.features-section .box-features .ul-box .li-box .box-content .boxcontent-text {
+  color: #666666;
+  font-size: 14px;
+  width: 168px;
+  margin-top: 8px;
 }
 
 .box-advantage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   width: 1200px;
-  height: 450px;
-}
-.box-advantage .label-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.box-advantage .label-box .label {
+  height: 606px;
+  background-color: #fff;
+  padding-top: 100px;
   margin: 0 auto;
-  border-radius: 50px;
-  width: 100px;
-  height: 33px;
-  background: #e64e4e;
-  line-height: 33px;
-  text-align: center;
 }
-.box-advantage .label-box span {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+.box-advantage .advantage-title {
+  width: 144px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  font-size: 19px;
   color: #fff;
+  background-color: #E64E4E;
+  border-radius: 30px;
+  margin: 0px auto 40px;
 }
 .box-advantage .tab-box {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  height: 300px;
 }
 .box-advantage .tab-box .tab-article {
-  border-radius: 5px;
-  width: 220px;
-  height: 250px;
-  background: #fff;
-  transition: all 0.5s;
+  flex: 1;
+  height: 419px;
+  text-align: center;
+  transition: all 0.2s ease-in;
+}
+.box-advantage .tab-box .tab-article .tab-img {
+  width: 235px;
+  height: 162px;
+  margin: 46px auto 35px;
+}
+.box-advantage .tab-box .tab-article .tab-img img {
+  width: 100%;
+  height: 100%;
+}
+.box-advantage .tab-box .tab-article .tab-title {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 550;
+  font-family: "Noto Sans SC", sans-serif;
+}
+.box-advantage .tab-box .tab-article .tab-division {
+  width: 54px;
+  height: 2px;
+  background-color: #E64E4E;
+  margin: 10px auto;
+}
+.box-advantage .tab-box .tab-article .tab-content {
+  width: 350px;
+  font-size: 14px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: #666666;
+  margin: 0 auto;
 }
 .box-advantage .tab-box .tab-article:hover {
-  box-shadow: 0 0 20px 0 rgba(4, 8, 79, 0.07);
-}
-.box-advantage .tab-box .tab-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.box-advantage .tab-box .tab-img img {
-  width: 200px;
-}
-.box-advantage .tab-box .tab-title {
-  text-align: center;
-}
-.box-advantage .tab-box .tab-title span {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  color: #000;
-}
-.box-advantage .tab-box hr {
-  border-style: none;
-  border-radius: 50px;
-  width: 50px;
-  height: 2px;
-  background-color: #e64e4e;
-}
-.box-advantage .tab-box .tab-content {
-  text-align: center;
-}
-.box-advantage .tab-box .tab-content span {
-  font-family: "Noto Sans SC", sans-serif;
-  font-size: 12px;
-  color: #666;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate3d(0, 0px, -2px);
+  transform: translate3d(0, 1px, -2px);
 }
 
 .last {
