@@ -110,16 +110,11 @@
   background-color: #101f1c;
 }
 
-.swiper-container {
-  margin-top: 50px;
+.banner {
   width: 100%;
   height: 250px;
-  text-align: center;
-  z-index: 2021;
-}
-.swiper-container img {
-  width: 100%;
-  height: 100%;
+  background: url("https://supply-company.oss-cn-shanghai.aliyuncs.com/image/banner.png") no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .introduction {
@@ -227,7 +222,6 @@
   color: #666666;
   font-size: 12px;
   width: 168px;
-  margin-top: 8px;
 }
 .features-section .box-features .img-box {
   position: relative;
@@ -242,15 +236,15 @@
   height: 350px;
 }
 
-.box-advantage {
+.advantage {
   width: 60%;
-  height: 400px;
+  height: 480px;
   background-color: #fff;
   padding-top: 50px;
   padding-bottom: 30px;
   margin: 0 auto;
 }
-.box-advantage .advantage-title {
+.advantage .advantage-title {
   width: 100px;
   height: 33px;
   line-height: 33px;
@@ -261,44 +255,44 @@
   border-radius: 30px;
   margin: 0px auto 40px;
 }
-.box-advantage .tab-box {
+.advantage .advantage-classify {
   display: flex;
 }
-.box-advantage .tab-box .tab-article {
+.advantage .advantage-classify .advantage-type {
   flex: 1;
   height: 300px;
   text-align: center;
   transition: all 0.2s ease-in;
 }
-.box-advantage .tab-box .tab-article .tab-img {
+.advantage .advantage-classify .advantage-type .advanragetype-img {
   width: 155px;
   height: 100px;
   margin: 46px auto 35px;
 }
-.box-advantage .tab-box .tab-article .tab-img img {
+.advantage .advantage-classify .advantage-type .advanragetype-img img {
   width: 100%;
   height: 100%;
 }
-.box-advantage .tab-box .tab-article .tab-title {
+.advantage .advantage-classify .advantage-type .advanragetype-title {
   font-size: 16px;
   color: #333333;
   font-weight: 550;
   font-family: "Noto Sans SC", sans-serif;
 }
-.box-advantage .tab-box .tab-article .tab-division {
+.advantage .advantage-classify .advantage-type .advanragetype-division {
   width: 54px;
   height: 2px;
   background-color: #E64E4E;
   margin: 10px auto;
 }
-.box-advantage .tab-box .tab-article .tab-content {
+.advantage .advantage-classify .advantage-type .advanragetype-content {
   width: 350px;
   font-size: 14px;
   font-family: "Noto Sans SC", sans-serif;
   color: #666666;
   margin: 0 auto;
 }
-.box-advantage .tab-box .tab-article:hover {
+.advantage .advantage-classify .advantage-type:hover {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
   -webkit-transform: translate3d(0, 0px, -2px);
