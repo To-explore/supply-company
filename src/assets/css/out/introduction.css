@@ -5,6 +5,7 @@
   position: fixed;
   top: 0px;
   z-index: 99999;
+  font-size: 14px;
 }
 .top-nav .center {
   width: 80%;
@@ -54,6 +55,7 @@
   flex: 1;
   display: flex;
   flex-direction: row;
+  font-size: 14px;
 }
 .top-nav .center .content-box .content-ul {
   width: 100%;
@@ -110,18 +112,17 @@
 
 .banner {
   width: 100%;
-  height: 569px;
+  height: 369px;
   background: url("../../image/introduction/banner.png") no-repeat center center;
   background-size: 100% 100%;
 }
 
 .content {
   width: 100%;
-  height: 1830px;
 }
 .content .business {
-  width: 1200px;
-  height: 440px;
+  width: 55%;
+  height: 240px;
   background-color: #fff;
   margin: -80px auto 0;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -129,31 +130,31 @@
   position: relative;
 }
 .content .business .bussiness-title {
-  width: 144px;
-  height: 46px;
-  line-height: 46px;
+  width: 100px;
+  height: 33px;
+  line-height: 33px;
   text-align: center;
   background-color: #E64E4E;
   border-radius: 30px;
   font-size: 14px;
   color: #fff;
   position: absolute;
-  top: -22px;
-  left: 528px;
+  top: -16px;
+  left: 45%;
 }
 .content .business .bussiness-classify {
   display: flex;
 }
 .content .business .bussiness-classify .bussiness-type {
   flex: 1;
-  height: 90px;
-  margin-top: 65px;
+  height: 60px;
+  margin-top: 35px;
   display: flex;
   flex-direction: row;
 }
 .content .business .bussiness-classify .bussiness-type .busstype-img {
-  width: 90px;
-  height: 90px;
+  width: 55px;
+  height: 55px;
   margin-left: 40px;
 }
 .content .business .bussiness-classify .bussiness-type .busstype-img img {
@@ -164,29 +165,32 @@
   margin-left: 20px;
 }
 .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 550;
 }
 .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-content {
   width: 183px;
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
   margin-top: 2px;
+  font-family: "Noto Sans SC", sans-serif;
+  letter-spacing: 1px;
+  line-height: 18px;
 }
 .content .business .bussclass-two {
   display: flex;
 }
 .content .business .bussclass-two .bussiness-type {
   flex: 1;
-  height: 90px;
-  margin-top: 120px;
+  height: 60px;
+  margin-top: 55px;
   display: flex;
   flex-direction: row;
 }
 .content .business .bussclass-two .bussiness-type .busstype-img {
-  width: 90px;
-  height: 90px;
+  width: 55px;
+  height: 55px;
   margin-left: 40px;
 }
 .content .business .bussclass-two .bussiness-type .busstype-img img {
@@ -197,64 +201,70 @@
   margin-left: 20px;
 }
 .content .business .bussclass-two .bussiness-type .busstype-right .busstype-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 550;
 }
 .content .business .bussclass-two .bussiness-type .busstype-right .busstype-content {
   width: 183px;
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
   margin-top: 2px;
+  font-family: "Noto Sans SC", sans-serif;
+  letter-spacing: 1px;
+  line-height: 18px;
 }
 .content .clouddata {
-  width: 1200px;
+  width: 55%;
   height: 350px;
   margin: 186px auto 0;
   position: relative;
 }
 .content .clouddata .clouddata-title {
-  width: 144px;
-  height: 46px;
-  line-height: 46px;
+  width: 100px;
+  height: 33px;
+  line-height: 33px;
   text-align: center;
   background-color: #E64E4E;
   border-radius: 30px;
   font-size: 14px;
   color: #fff;
   position: absolute;
-  top: -86px;
-  left: 528px;
+  top: -70px;
+  left: 45%;
 }
 .content .clouddata .clouddata-classify {
   display: flex;
 }
 .content .clouddata .clouddata-classify .clouddata-type {
   flex: 1;
-  height: 350px;
+  height: 330px;
   text-align: center;
   transition: all 0.2s ease-in;
 }
 .content .clouddata .clouddata-classify .clouddata-type .cloudtype-img {
-  width: 101px;
-  height: 101px;
-  margin: 60px auto 19px;
+  width: 88px;
+  height: 88px;
+  margin: 60px auto 30px;
 }
 .content .clouddata .clouddata-classify .clouddata-type .cloudtype-img img {
   width: 100%;
   height: 100%;
 }
 .content .clouddata .clouddata-classify .clouddata-type .cloudtype-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 550;
 }
 .content .clouddata .clouddata-classify .clouddata-type .cloudtype-content {
   width: 258px;
   overflow: hidden;
-  margin: 17px auto 0;
-  font-size: 14px;
+  margin: 20px auto 0;
+  font-size: 12px;
   color: #666666;
+  font-family: "Noto Sans SC", sans-serif;
+  letter-spacing: 1px;
+  line-height: 18px;
 }
 .content .clouddata .clouddata-classify .clouddata-type:hover {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -263,23 +273,23 @@
   transform: translate3d(0, 1px, -2px);
 }
 .content .systemhome {
-  width: 1200px;
-  height: 560px;
-  margin: 217px auto 0;
+  width: 55%;
+  height: 550px;
+  margin: 180px auto 0;
   position: relative;
 }
 .content .systemhome .systemhome-title {
-  width: 144px;
-  height: 46px;
-  line-height: 46px;
+  width: 100px;
+  height: 33px;
+  line-height: 33px;
   text-align: center;
   background-color: #E64E4E;
   border-radius: 30px;
   font-size: 14px;
   color: #fff;
   position: absolute;
-  top: -114px;
-  left: 528px;
+  top: -85px;
+  left: 45%;
 }
 .content .systemhome .systemhome-classify {
   width: 100%;
@@ -287,14 +297,14 @@
 }
 .content .systemhome .systemhome-classify .systemhome-type {
   width: 50%;
-  height: 280px;
+  height: 240px;
   float: left;
   transition: all 0.2s ease-in;
   display: flex;
   flex-direction: row;
 }
 .content .systemhome .systemhome-classify .systemhome-type .systemtype-img {
-  width: 310px;
+  width: 250px;
   height: 178px;
   margin-left: 26px;
   margin-top: 51px;
@@ -308,16 +318,19 @@
   margin-left: 35px;
 }
 .content .systemhome .systemhome-classify .systemhome-type .systemtype-right .systemtype-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 550;
   margin-top: 19px;
 }
 .content .systemhome .systemhome-classify .systemhome-type .systemtype-right .systemtype-content {
   width: 187px;
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
   margin-top: 17px;
+  line-height: 18px;
+  font-family: "Noto Sans SC", sans-serif;
+  letter-spacing: 1px;
 }
 .content .systemhome .systemhome-classify .systemhome-type:hover {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);

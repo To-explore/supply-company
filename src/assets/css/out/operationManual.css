@@ -121,8 +121,8 @@
   width: 100%;
 }
 .content .content-hover {
-  width: 1200px;
-  height: 2232px;
+  width: 50%;
+  height: 1965px;
   margin: -125px auto 101px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -213,7 +213,7 @@
 .content .content-hover .content-talk li {
   margin-top: 50px;
   width: 100%;
-  height: 304px;
+  height: 255px;
   display: flex;
   justify-content: space-between;
 }
@@ -236,7 +236,7 @@
   background: url("../../image/operationManual/bgcViolet.png") no-repeat center center;
 }
 .content .content-hover .content-talk li .talk-repeat {
-  width: 871px;
+  flex: 6;
   height: 100%;
   background-size: 100% 100%;
   position: relative;
@@ -264,13 +264,15 @@
   height: 100%;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleL {
-  margin: 80px 153px 105px 170px;
+  margin: 50px 70px 105px 155px;
   color: #333333;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  font-family: "Noto Sans SC", sans-serif;
+  line-height: 18px;
+  letter-spacing: 1px;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleL .talk-download {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 151px;
   height: 35px;
   line-height: 35px;
@@ -278,22 +280,24 @@
   border-radius: 30px;
   background-color: #E64E4E;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleL .talk-download img {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleR {
-  margin: 80px 153px 105px 170px;
+  margin: 50px 155px 105px 70px;
   color: #333333;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  font-family: "Noto Sans SC", sans-serif;
+  line-height: 18px;
+  letter-spacing: 1px;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleR .talk-download {
   float: right;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 151px;
   height: 35px;
   line-height: 35px;
@@ -301,22 +305,40 @@
   border-radius: 30px;
   background-color: #E64E4E;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
 }
 .content .content-hover .content-talk li .talk-repeat .talk-bgctitleR .talk-download img {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
 }
 .content .content-hover .content-talk li .talk-avatar {
-  width: 116px;
+  flex: 1;
   height: 116px;
   border-radius: 50%;
   margin: auto 0;
+  position: relative;
 }
 .content .content-hover .content-talk li .talk-avatar img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 80%;
+  height: 80%;
+}
+.content .content-hover .content-talk li .talk-avatarL {
+  flex: 1;
+  height: 116px;
+  border-radius: 50%;
+  margin: auto 0;
+  position: relative;
+}
+.content .content-hover .content-talk li .talk-avatarL img {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 80%;
+  height: 80%;
 }
 
 .record-information {
