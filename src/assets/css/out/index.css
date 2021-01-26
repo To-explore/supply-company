@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -104,10 +103,6 @@ a {
   width: 22px;
   background-color: white;
   display: block;
-}
-.navbar .navbar-header .navbar-toggler span img {
-  width: 30px;
-  height: 30px;
 }
 .navbar .navbar-header .navbar-toggler span:not(:last-child) {
   margin-bottom: 0.2rem;
