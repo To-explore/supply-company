@@ -1,0 +1,333 @@
+/* 导航 */
+header .navbar {
+    margin-bottom: 0;
+    background-color: #04084f;
+}
+header .navbar h1 {
+    float: left;
+    margin: 0;
+    width: 250px;
+    font-size: 16px;
+    font-family: "Ma Shan Zheng", cursive;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border-right: 1px solid transparent;
+    margin-left: 5px;
+    white-space: nowrap;
+    animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+}
+@keyframes caret {
+    50% {
+      border-right-color: currentColor;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+header nav .nav li a {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Noto Sans SC", sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+header nav .nav li a:hover {
+    color: #ff9797;
+    background-color: #04084f;
+}
+
+header nav .nav li .active {
+    color: #e64e4e;
+}
+header nav .logo {
+    width: 270px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+header nav .logo img {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+/* 产品分类 */
+.products {
+    background: #2c2f34;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.products #myTabContent {
+    text-align: center;
+}
+
+.products #myTabContent p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.products #myTabContent img {
+    height: 235px;
+}
+
+.products h2 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.products h2 a {
+    color: #9ba5af;
+}
+
+.products ul {
+    text-align: center;
+    border-bottom: solid 2px #26292e;
+    margin-bottom: 30px;
+}
+
+.products ul li {
+    float: none;
+    display: inline-block;
+}
+
+.products ul li a {
+    padding: 10px 30px;
+    color: #c5d0df;
+}
+
+.products .nav > li > a:hover {
+    color: #000;
+}
+
+.products #myTabContent div a {
+    color: #e2e2e2;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.products #myTabContent div a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.products #myTabContent div a img {
+    width: 100%;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.products #myTabContent div a p {
+    margin-bottom: 0;
+    margin-top: 4px;
+}
+
+.products #myTabContent div a .products-pmbb {
+    border-bottom: solid #909090 1px;
+    padding-bottom: 10px;
+}
+
+.products div p a {
+    border: solid #909090 1px;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.products div p a:hover {
+    border: solid #fff 1px;
+    color: #fff;
+}
+
+
+@media (max-width: 1200px) {
+    .products {
+        text-align: center;
+    }
+    .products #myTabContent div img {
+        width: 221px;
+        height: 177px;
+    }
+}
+@media (max-width: 1025px) {
+    .products ul {
+        margin-bottom: 40px;
+    }
+
+    .products ul li a {
+        padding: 7px 21px;
+    }
+
+    .products div img {
+        height: 160px;
+    }
+    .products #myTabContent div a p {
+        text-align: left;
+    }
+}
+@media (max-width: 970px) {
+    header .nav a {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 750px) {
+    .products #myTabContent div a p {
+        text-align: center;
+    }  
+    header ul li a {
+        text-align: center;
+    }
+    header nav .logo {
+        margin-left: 7.5px;
+    }
+    header .navbar-toggle {
+        border: solid #fff 1px;
+    }
+
+    header .navbar-toggle span {
+        border-bottom: 1px #fff solid;
+    }
+    .products img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 720px) {
+    .products #myTabContent div p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .products #myTabContent div img {
+        height: 233px;
+        margin-top: 20px;
+    }
+}
+
+/*回到顶部以及客服 css*/
+.izl-rmenu {
+    margin-right: 0;
+    width: 82px;
+    position: fixed;
+    right: 2px;
+    top: 65%;
+    -webkit-box-shadow: #DDD 0px 1px 5px;
+    -moz-box-shadow: #DDD 0px 1px 5px;
+    box-shadow: #DDD 0px 1px 5px;
+    z-index: 999;
+}
+
+.izl-rmenu .consult {
+    background-image: url(../../image/test/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center -77px;
+    display: block;
+    height: 76px;
+    width: 82px;
+}
+
+.izl-rmenu .consult .phone {
+    background-color: #f7f7ff;
+    position: absolute;
+    width: 160px;
+    left: -160px;
+    top: 0px;
+    line-height: 73px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    box-shadow: #DDD -1px 1px 4px;
+}
+
+.izl-rmenu a.consult:hover .phone {
+    display: inline !important;
+}
+
+.izl-rmenu .cart {
+    background-image: url(../../image/test/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #45BDFF;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 34px;
+    padding-bottom: 47px;
+    padding-left: 48px;
+}
+
+.izl-rmenu a.cart:hover .pic {
+    display: block;
+}
+
+.izl-rmenu .btn_top {
+    background-image: url(../../image/test/float_top.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 39px;
+    width: 82px;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+}
+
+.izl-rmenu .btn_top:hover {
+    background-image: url(../../image/test/float_top.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.izl-rmenu .cart .pic {
+    display: none;
+    position: absolute;
+    left: -160px;
+    top: 65px;
+    width: 160px;
+    height: 160px;
+    background: url(../../image/test/weixin.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#udesk-feedback-tab {
+    position: fixed;
+    right: 2px;
+    top: 65%;
+    margin-top: -76px;
+    -webkit-box-shadow: #DDD 0px -1px 5px;
+    -moz-box-shadow: #DDD 0px -1px 5px;
+    box-shadow: #DDD 0px -1px 5px;
+    cursor: pointer;
+    background-image: url(../../image/test/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 76px;
+    width: 82px;
+    background-color: #FFF !important;
+    z-index: 999;
+}
+
+.udesk-feedback-tab-left, .izl-rmenu {
+    opacity: 0.9;
+}

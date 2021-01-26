@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>啦啦啦</title>
+    <meta charset="utf-8">
+    <title>中商云产业链供应链管理平台</title>
+    <link rel="shortcut icon" href="./src/assets/icons/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--做移动端一定要加他.支持手机端的neta标签<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--为了能更好的显示-->
+    <!--这是为了让网站优先兼容最高版本的ie浏览器 -->
+    <!-- CSS -->
     <!--bootstrap的css-->
     <link rel="stylesheet" href="./src/plug/bootstrap-3.2.0-dist/css/bootstrap.min.css">
-    <style lang="less">
-        
-    </style>
+    <!--自己的css-->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="./src/assets/css/out/test.css">
 </head>
 <body>
+<!--header头部-->
+<header>
     <nav class="navbar" role="navigation">
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
@@ -23,10 +32,11 @@
                 </button>
                 <a class="logo" href="index.html">
                     <img class="logo" src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" alt="">
-                    <h1>中商云产业链 供应链管理平台</h1>
+                    <h1>中商云产业链供应链管理平台</h1>
                 </a>
             </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="active" href="#">首页</a></li>
@@ -38,10 +48,272 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="./src/js/jquery-1.11.1.js"></script>
-    <script src="./src/js/jquery-1.8.3.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="./src/plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</header>
+
+<!--公司产品分类介绍 clo-md-3 .products w100% bg#2c2f34-->
+<div class="products">
+    <h2 class="text-center"><a href="products.html">产品展示</a></h2>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">榻榻米系列</a></li>
+        <li><a href="#yvgang" data-toggle="tab">卧房系列</a></li>
+        <li><a href="#yvshi" data-toggle="tab">客厅系列</a></li>
+        <li><a href="#zuobian" data-toggle="tab">餐厅系列</a></li>
+        <li><a href="#linyv" data-toggle="tab">书房系列</a></li>
+        <li><a href="#huajiu" data-toggle="tab">地板系列</a></li>
+        <li><a href="#mianpen" data-toggle="tab">橱柜系列</a></li>
+        <li><a href="#shuilongtou" data-toggle="tab">衣柜系列</a></li>
+    </ul>
+    <div class="container">
+        <div id="myTabContent" class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="row index-main">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href="xiangqing/huasa.html"><img src="./src/assets/image/test/zhengti1.jpg" alt=""></a>
+                        <a href="xiangqing/huasa.html">
+                            <p> 现代简约 玩色系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href="xiangqing/yvgang.html"><img src="./src/assets/image/test/zhengti2.jpg" alt=""></a>
+                        <a href="xiangqing/yvgang.html">
+                            <p>现代简约 原木系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"><img src="./src/assets/image/test/zhengti3.jpg" alt=""></a>
+                        <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389">
+
+                            <p>现代简约 优格系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.6.jpN6qf&id=542745978792"><img src="./src/assets/image/test/zhengti4.jpg" alt=""></a>
+                        <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.6.jpN6qf&id=542745978792">
+                            <p>新中式榻榻米</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="yvgang" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvgang1.jpg" alt=""></a>
+                        <a href="">
+                            <p>美式风</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvgang2.jpg" alt=""></a>
+                        <a href="">
+                            <p>简约 温莎系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvgang3.jpg" alt=""></a>
+                        <a href="">
+                            <p>韩式田园</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvgang4.jpg" alt=""></a>
+                        <a href="">
+                            <p>2017新实用风格卧房</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="yvshi" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvshigui1.jpg" alt=""></a>
+                        <a href="">
+                            <p> 现代简约系列 衣帽柜</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvshigui2.jpg" alt=""></a>
+                        <a href="">
+                            <p>简约主义 电视柜</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvshigui3.jpg" alt=""></a>
+                        <a href="">
+                            <p>现代简约  风尚系列 玄关柜</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/yvshigui4.jpg" alt=""></a>
+                        <a href="">
+                            <p> 中式风 中国韵系列酒柜</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="zuobian" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/matong8.jpg" alt=""></a>
+                        <a href="">
+                            <p> 简约风 温莎系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/matong7.jpg" alt=""></a>
+                        <a href="">
+                            <p> 苏格兰田园 餐厅</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/matong6.jpg" alt=""></a>
+                        <a href="">
+                            <p> 简约风 温莎系列</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/matong5.jpg" alt=""></a>
+                        <a href="">
+                            <p>苏格兰田园 餐厅</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="linyv" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/linyvfang1.jpg" alt=""></a>
+                        <a href="">
+                            <p>极简主义 书房</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/linyvfang2.jpg" alt=""></a>
+                        <a href="">
+                            <p>中式风 中国韵系列书房</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/linyvfang3.jpg" alt=""></a>
+                        <a href="">
+                            <p>简约主义 书房</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/linyvfang4.jpg" alt=""></a>
+                        <a href="">
+                            <p>苏格兰田园 书房</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="huajiu" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/huasa1.jpg" alt=""></a>
+                        <a href="">
+                            <p>蒂罗尔</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/huasa2.jpg" alt=""></a>
+                        <a href="">
+                            <p>左岸</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/huasa3.jpg" alt=""></a>
+                        <a href="">
+                            <p>轻奢主义</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/huasa4.jpg" alt=""></a>
+                        <a href="">
+                            <p>白色恋人</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="mianpen" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/mianpen1.jpg" alt=""></a>
+                        <a href="">
+                            <p>古韵兰亭</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/mianpen2.jpg" alt=""></a>
+                        <a href="">
+                            <p>蒂罗尔</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/mianpen3.jpg" alt=""></a>
+                        <a href="">
+                            <p>初夏</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/mianpen4.jpg" alt=""></a>
+                        <a href="">
+                            <p>欧森佐</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="shuilongtou" class="tab-pane fade">
+                <div class="row">
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/shuilongtou1.jpg" alt=""></a>
+                        <a href="">
+                            <p>中式风 中国韵系列衣柜</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/shuilongtou2.jpg" alt=""></a>
+                        <a href="">
+                            <p>中式风 中国韵系列书房</p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/shuilongtou3.jpg" alt=""></a>
+                        <a href="">
+                            <p>简约主义 书房 </p>
+                        </a>
+                    </div>
+                    <div href="" class="col-md-3 col-sm-6">
+                        <a href=""><img src="./src/assets/image/test/shuilongtou4.jpg" alt=""></a>
+                        <a href="">
+                            <p>简约主义 电视柜</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><p><a href="products.html">更多</a></p></div>
+    </div>
+</div>
+
+<!--回到顶部-->
+<!--在线客服-->
+<!--qq聊天代码部分begin-->
+<div class="izl-rmenu">
+    <a class="consult" target="_blank"><div class="phone" style="display:none;">0512-66536994</div></a>
+    <a class="cart"><div class="pic"></div></a>
+    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+</div>
+<a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes" id="udesk-feedback-tab" class="udesk-feedback-tab-left" style="display: block; background-color: black;"></a>
+<!--qq聊天代码部分end-->
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./src/js/jquery-1.11.1.js"></script>
+<script src="./src/js/jquery-1.8.3.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./src/plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+<!--自己写的js-->
+<script src="./src/js/test.js"></script>
 </body>
+
 </html>
