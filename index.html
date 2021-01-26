@@ -1,6 +1,6 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-25 17:09:44
+ * @LastEditTime: 2021-01-26 09:37:14
 -->
 <!doctype html>
 <html lang="en">
@@ -23,37 +23,58 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand d-flex" href="#">
-      <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      中商云产业链 供应链管理平台
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
-      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-      </ul>
-      <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-        <li class="nav-item active">
-          <a class="nav-link" style="color: #fff;" href="#">首页</a>
-        </li>
-        <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="./src/page/Introduction.html">功能介绍</a>
-        </li>
-        <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="./src/page/operationManual.html">操作手册</a>
-        </li>
-        <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="http://47.98.102.198">业财一体化</a>
-        </li>
-        <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="./src/page/contact.html">联系我们</a>
-        </li>
-      </ul>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#">
+          <h25<span><img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png"
+              style="width: 28px;height: 28px;margin-right: 10px;" alt="logo"></span>中商云产业链供应链管理平台</h6>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Categories <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown" id="my-dropdown-id">
+              <li><a href="#">Actions</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Seprated link</a></li>
+              <li class="separator"></li>
+              <li><a href="#">One more seprated link.</a></li>
+            </ul>
+          </li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="blog">
+              Blog <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown" id="blog">
+              <li><a href="#">Some category</a></li>
+              <li><a href="#">Some another category</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Seprated link</a></li>
+              <li class="separator"></li>
+              <li><a href="#">One more seprated link.</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Signin</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+
   <!-- banner -->
   <div class="banner"></div>
 
