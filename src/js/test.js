@@ -21,13 +21,6 @@ $(".products #myTabContent div a").hover(
         $(this).find("img").stop().animate({"opacity": "0.5"}, 700)
     }
 );
-$(".join img").hover(
-    function () {
-        $(this).stop().animate({"opacity": "1"}, 700)
-    }, function () {
-        $(this).stop().animate({"opacity": "0.5"}, 700)
-    }
-);
 //回到顶部
 $(window).scroll(function () {//
     if ($(window).scrollTop() > 100) {//当高度小于100

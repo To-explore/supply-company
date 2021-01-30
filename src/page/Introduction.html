@@ -7,47 +7,51 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--做移动端一定要加他.支持手机端的neta标签<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!--为了能更好的显示-->
+  <!--这是为了让网站优先兼容最高版本的ie浏览器 -->
   <link rel="shortcut icon" href="../assets/icons/logo.ico">
-  <!-- fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="../assets/css/out/common.css">
-  <!-- Normalize -->
-  <link rel="stylesheet" href="../assets/css/out/Normalize.css">
+  <!--bootstrap的css-->
+  <link rel="stylesheet" href="../plug/bootstrap-3.2.0-dist/css/bootstrap.min.css">
   <!-- My css -->
   <link rel="stylesheet" href="../assets/css/out/introduction.css">
   <title>功能介绍</title>
 </head>
 
 <body>
-  <nav class="top-nav">
-    <div class="center">
-      <div class="logo-box">
-        <img src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" alt="公司logo">
-        <span class="title-text">中商云产业链 供应链管理平台</span>
-      </div>
-      <div class="content-box">
-        <ul class="content-ul">
-          <li>
-            <a href="../../index.html">首页</a>
-          </li>
-          <li class="active">
-            <a href="#">功能介绍</a>
-          </li>
-          <li>
-            <a href="operationManual.html">操作手册</a>
-          </li>
-          <li>
-            <a href="http://47.98.102.198">业财一体化</a>
-          </li>
-          <li>
-            <a href="contact.html">联系我们</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="index.html">
+                    <img class="logo" src="https://supply-company.oss-cn-shanghai.aliyuncs.com/image/company-logo-white.png" alt="">
+                    <h1>中商云有色金属研发中心</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../index.html">首页</a></li>
+                    <li><a  class="active" href="#">功能介绍</a></li>
+                    <li><a href="operationManual.html">操作手册</a></li>
+                    <li><a href="http://47.98.102.198">供应链采销系统</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+  </header>
   <!-- banner图 -->
   <div class="banner"></div>
 
@@ -64,7 +68,7 @@
           <div class="busstype-right">
             <div class="busstype-title">销售</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
@@ -75,7 +79,7 @@
           <div class="busstype-right">
             <div class="busstype-title">采购</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
@@ -86,12 +90,12 @@
           <div class="busstype-right">
             <div class="busstype-title">派车</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
       </ul>
-      <ul class="bussclass-two">
+      <ul class="bussiness-classify">
         <li class="bussiness-type">
           <div class="busstype-img">
             <img src="../assets/image/introduction/deliver.png">
@@ -99,7 +103,7 @@
           <div class="busstype-right">
             <div class="busstype-title">发货</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
@@ -110,7 +114,7 @@
           <div class="busstype-right">
             <div class="busstype-title">仓库</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
@@ -121,13 +125,13 @@
           <div class="busstype-right">
             <div class="busstype-title">财务</div>
             <div class="busstype-content">
-              君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发。
+              君不见，黄河之水天上来，奔流到海不复回。
             </div>
           </div>
         </li>
       </ul>
     </div>
-    <div class="clouddata">
+    <!-- <div class="clouddata">
       <div class="clouddata-title">
         云数据
       </div>
@@ -218,7 +222,7 @@
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 
   <!-- footer start -->
@@ -230,7 +234,22 @@
     </div>
   </footer>
   <!-- footer end -->
+  <!--回到顶部-->
+  <!--在线客服-->
+  <!--qq聊天代码部分begin-->
+  <div class="izl-rmenu">
+    <a class="consult" target="_blank"><div class="phone" style="display:none;">0512-66536994</div></a>
+    <a class="cart"><div class="pic"></div></a>
+    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+  </div>
+  <a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes" id="udesk-feedback-tab" class="udesk-feedback-tab-left" style="display: block; background-color: black;"></a>
+  <!--qq聊天代码部分end-->
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="../js/jquery-1.11.1.js"></script>
+  <script src="../js/jquery-1.8.3.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="../plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+  <!-- My javascript -->
+  <script src="../js/index.js"></script>
 </body>
-<!-- My javascript -->
-<script src="../js/index.js"></script>
 </html>

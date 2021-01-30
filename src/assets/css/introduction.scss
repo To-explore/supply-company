@@ -1,6 +1,8 @@
 @import "../../style/variables.scss";
-@import "../../style/navbar.scss";
 
+li {
+  list-style: none;
+}
 // 滚动条样式优化
 ::-webkit-scrollbar {
     width: 6px;
@@ -30,11 +32,111 @@
     background-color: rgba(#101f1c, 1);
 }
 
+
+/* 导航 */
+header {
+    .navbar {
+      margin-bottom: 0;
+      background-color: #04084f;
+      .logo {
+        width: 270px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+          align-items: center;
+        }
+      }
+      @media (max-width: 750px) {
+        .logo {
+          margin-left: 7.5px;
+        }
+        .navbar-toggle {
+          border: solid #fff 1px;
+          span {
+            border-bottom: 1px #fff solid;
+          }
+        }
+      }
+      h1 {
+        float: left;
+        margin: 0;
+        width: 210px;
+        font-size: 16px;
+        font-family: "Ma Shan Zheng", cursive;
+        font-weight: 400;
+        color: #ffffff;
+        letter-spacing: 1px;
+        overflow: hidden;
+        border-right: 1px solid transparent;
+        margin-left: 5px;
+        white-space: nowrap;
+        animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+      }
+      @keyframes caret {
+        50% {
+          border-right-color: currentColor;
+        }
+      }
+      @keyframes typing {
+        from {
+            width: 0;
+        }
+      }
+      .nav {
+        li {
+          .active {
+            color: #e64e4e;
+          }
+          a {
+            color: #ffffff;
+            font-size: 12px;
+            font-family: "Noto Sans SC", sans-serif;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+          }
+          @media (max-width: 970px) {
+            a {
+              padding: 12px 10px;
+              font-size: 12px;
+            }
+          }
+          @media (max-width: 750px) {
+            a {
+              text-align: center;
+            }
+          }
+          a:hover {
+            color: #ff9797;
+            background-color: #04084f;
+          }
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      .navbar {
+        border-radius: 0;
+      }
+    }
+}
+
 .banner {
     width: 100%;
     height: 369px;
     background: url('../../image/introduction/banner.png') no-repeat center center;
     background-size: 100% 100%;
+}
+@media (max-width: 1240px) {
+  .banner {
+    height: 269px;
+  }
+}
+@media (max-width: 750px) {
+  .banner {
+    height: 169px;
+  }
 }
 
 .content {
@@ -58,24 +160,52 @@
             color: #fff;
             position: absolute;
             top: -16px;
-            left: 45%;
+            left: 41%;
         }
         .bussiness-classify {
             display: flex;
+            padding-left: 0;
+            height: 120px;
+            margin-bottom: 0;
             .bussiness-type {
                 flex: 1;
                 height: 60px;
-                margin-top: 35px;
+                margin: auto 0;
                 display: flex;
                 flex-direction: row;
+                padding-left: 4%;
                 .busstype-img {
                     width: 55px;
                     height: 55px;
-                    margin-left: 40px;
+                    margin: auto 0;
                     img {
                         width: 100%;
                         height: 100%;
                     }
+                }
+                @media (max-width: 1555px) {
+                  .busstype-img {
+                    width: 40px;
+                    height: 40px;
+                  }
+                }
+                @media (max-width: 1381px) {
+                  .busstype-img {
+                    width: 30px;
+                    height: 30px;
+                  }
+                }
+                @media (max-width: 1240px) {
+                  .busstype-img {
+                    width: 50px;
+                    height: 50px;
+                  }
+                }
+                @media (max-width: 940px) {
+                  .busstype-img {
+                    width: 40px;
+                    height: 40px;
+                  }
                 }
                 .busstype-right {
                     margin-left: 20px;
@@ -83,6 +213,16 @@
                         font-size: 14px;
                         color: #333333;
                         font-weight: 550;
+                    }
+                    @media (max-width: 1240px) {
+                      .busstype-title {
+                        margin-top: 20px;
+                      }
+                    }
+                    @media (max-width: 940px) {
+                      .busstype-title {
+                        margin-top: 15px;
+                      }
                     }
                     .busstype-content {
                         width: 183px;
@@ -93,45 +233,77 @@
                         letter-spacing: 1px;
                         line-height: 18px;
                     }
-                }
-            }
-        }
-        .bussclass-two {
-            display: flex;
-            .bussiness-type {
-                flex: 1;
-                height: 60px;
-                margin-top: 55px;
-                display: flex;
-                flex-direction: row;
-                .busstype-img {
-                    width: 55px;
-                    height: 55px;
-                    margin-left: 40px;
-                    img {
+                    @media (max-width: 1240px) {
+                      .busstype-content {
                         width: 100%;
-                        height: 100%;
+                      }
                     }
                 }
-                .busstype-right {
+                @media (max-width: 1456px) {
+                  .busstype-right {
+                    margin-left: 10px;
+                  }
+                }
+                @media (max-width: 1240px) {
+                  .busstype-right {
+                    margin-left: 30px;
+                  }
+                }
+                @media (max-width: 940px) {
+                  .busstype-right {
                     margin-left: 20px;
-                    .busstype-title {
-                        font-size: 14px;
-                        color: #333333;
-                        font-weight: 550;
-                    }
-                    .busstype-content {
-                        width: 183px;
-                        font-size: 12px;
-                        color: #666666;
-                        margin-top: 2px;
-                        font-family: "Noto Sans SC", sans-serif;
-                        letter-spacing: 1px;
-                        line-height: 18px;
-                    }
+                  }
                 }
             }
+            @media (max-width: 1700px) {
+              .bussiness-type {
+                padding-left: 2%;
+              }
+            }
+            @media (max-width: 1297px) {
+              .bussiness-type {
+                padding-left: 1%;
+              }
+            }
+            @media (max-width: 1240px) {
+              .bussiness-type {
+                flex: none;
+                width: 400px;
+                height: 80px;
+                padding-left: 0;
+                margin: 0 auto 10px;
+              }
+            }
+            @media (max-width: 940px) {
+              .bussiness-type {
+                height: 70px;
+                width: 340px;
+              }
+            }
         }
+        @media (max-width: 1240px) {
+          .bussiness-classify {
+            flex-direction: column;
+            height: 270px;
+          }
+        }
+        @media (max-width: 940px) {
+          .bussiness-classify {
+            height: 240px;
+          }
+        }
+    }
+    @media (max-width: 1240px) {
+      .business {
+        width: 50%;
+        height: 580px;
+        padding-top: 30px;
+      }
+    }
+    @media (max-width: 940px) {
+      .business {
+        height: 530px;
+      }
     }
     .clouddata {
         width: 55%;
@@ -276,3 +448,117 @@
     }
 }
 // footer end
+
+/*回到顶部以及客服 css*/
+.izl-rmenu {
+  margin-right: 0;
+  width: 82px;
+  position: fixed;
+  right: 2px;
+  top: 65%;
+  -webkit-box-shadow: #DDD 0px 1px 5px;
+  -moz-box-shadow: #DDD 0px 1px 5px;
+  box-shadow: #DDD 0px 1px 5px;
+  z-index: 999;
+}
+
+.izl-rmenu .consult {
+  background-image: url(../../image/test/consult_icon.gif);
+  background-repeat: no-repeat;
+  background-position: center -77px;
+  display: block;
+  height: 76px;
+  width: 82px;
+}
+
+.izl-rmenu .consult .phone {
+  background-color: #f7f7ff;
+  position: absolute;
+  width: 160px;
+  left: -160px;
+  top: 0px;
+  line-height: 73px;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  display: none;
+  box-shadow: #DDD -1px 1px 4px;
+}
+
+.izl-rmenu a.consult:hover .phone {
+  display: inline !important;
+}
+
+.izl-rmenu .cart {
+  background-image: url(../../image/test/consult_icon.gif);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: block;
+  height: 16px;
+  width: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #45BDFF;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 34px;
+  padding-bottom: 47px;
+  padding-left: 48px;
+}
+
+.izl-rmenu a.cart:hover .pic {
+  display: block;
+}
+
+.izl-rmenu .btn_top {
+  background-image: url(../../image/test/float_top.gif);
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: block;
+  height: 39px;
+  width: 82px;
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+}
+
+.izl-rmenu .btn_top:hover {
+  background-image: url(../../image/test/float_top.gif);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.izl-rmenu .cart .pic {
+  display: none;
+  position: absolute;
+  left: -160px;
+  top: 65px;
+  width: 160px;
+  height: 160px;
+  background: url(../../image/test/weixin.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#udesk-feedback-tab {
+  position: fixed;
+  right: 2px;
+  top: 65%;
+  margin-top: -76px;
+  -webkit-box-shadow: #DDD 0px -1px 5px;
+  -moz-box-shadow: #DDD 0px -1px 5px;
+  box-shadow: #DDD 0px -1px 5px;
+  cursor: pointer;
+  background-image: url(../../image/test/consult_icon.gif);
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: block;
+  height: 76px;
+  width: 82px;
+  background-color: #FFF !important;
+  z-index: 999;
+}
+
+.udesk-feedback-tab-left, .izl-rmenu {
+  opacity: 0.9;
+}

@@ -184,6 +184,11 @@ header nav .logo img {
         font-size: 12px;
     }
 }
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
 @media (max-width: 750px) {
     .products #myTabContent div a p {
         text-align: center;
