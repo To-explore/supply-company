@@ -53,3 +53,29 @@ $(function() {
 })
 
 /*---------返回顶部 end----------*/
+let nums1 = [1,2,2,1];
+let nums2 = [2,2];
+let num = [];
+for (var i = 0; i<nums1.length; i++) {
+	for (var j = 0; j < nums2.length; j++) {
+    	if (nums1[i] == nums2[j] && nums2.splice(nums2.indexOf(nums1[i]), 1)) {
+         num.push(nums1[i])
+        }
+        console.log(num);
+    }
+}
+// var intersect = function(nums1, nums2) {
+//     var hashTable = {};
+//     var target = [];
+//     nums1.forEach(v => {
+//         if(hashTable[v]) hashTable[v]++;
+//         else hashTable[v] = 1;   
+//     })
+//     nums2.forEach(v => {
+//         if(hashTable[v] && hashTable[v] > 0) {
+//             hashTable[v]--;
+//             target.push(v);
+//         }
+//     })
+//     return target;
+// };
