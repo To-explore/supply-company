@@ -152,7 +152,17 @@ header .navbar .nav li a:hover {
   color: #fff;
   position: absolute;
   top: -16px;
-  left: 41%;
+  left: 45%;
+}
+@media (max-width: 1240px) {
+  .content .business .bussiness-title {
+    left: 42%;
+  }
+}
+@media (max-width: 991px) {
+  .content .business .bussiness-title {
+    left: 41%;
+  }
 }
 @media (max-width: 750px) {
   .content .business .bussiness-title {
@@ -375,7 +385,7 @@ header .navbar .nav li a:hover {
   }
 }
 .content .clouddata {
-  width: 55%;
+  width: 45%;
   height: 350px;
   margin: 186px auto 0;
   position: relative;
@@ -391,33 +401,99 @@ header .navbar .nav li a:hover {
   color: #fff;
   position: absolute;
   top: -70px;
-  left: 45%;
+  left: 44%;
 }
-.content .clouddata .clouddata-classify {
-  display: flex;
+@media (max-width: 1530px) {
+  .content .clouddata .clouddata-title {
+    left: 42%;
+  }
 }
-.content .clouddata .clouddata-classify .clouddata-type {
-  flex: 1;
-  height: 330px;
+@media (max-width: 1240px) {
+  .content .clouddata .clouddata-title {
+    left: 40%;
+  }
+}
+@media (max-width: 991px) {
+  .content .clouddata .clouddata-title {
+    left: 38%;
+    top: -40px;
+  }
+}
+@media (max-width: 750px) {
+  .content .clouddata .clouddata-title {
+    left: 35%;
+  }
+}
+@media (max-width: 660px) {
+  .content .clouddata .clouddata-title {
+    left: 32%;
+  }
+}
+@media (max-width: 540px) {
+  .content .clouddata .clouddata-title {
+    left: 29%;
+  }
+}
+@media (max-width: 475px) {
+  .content .clouddata .clouddata-title {
+    left: 26%;
+  }
+}
+@media (max-width: 400px) {
+  .content .clouddata .clouddata-title {
+    left: 22%;
+  }
+}
+.content .clouddata .clouddata-list {
+  height: 270px;
   text-align: center;
   transition: all 0.2s ease-in;
 }
-.content .clouddata .clouddata-classify .clouddata-type .cloudtype-img {
-  width: 88px;
-  height: 88px;
-  margin: 60px auto 30px;
+.content .clouddata .clouddata-list .cloud-img {
+  width: 70px;
+  height: 70px;
+  margin: 40px auto 20px;
 }
-.content .clouddata .clouddata-classify .clouddata-type .cloudtype-img img {
+.content .clouddata .clouddata-list .cloud-img img {
   width: 100%;
   height: 100%;
 }
-.content .clouddata .clouddata-classify .clouddata-type .cloudtype-title {
+@media (max-width: 1346px) {
+  .content .clouddata .clouddata-list .cloud-img {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1240px) {
+  .content .clouddata .clouddata-list .cloud-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .content .clouddata .clouddata-list .cloud-img {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 750px) {
+  .content .clouddata .clouddata-list .cloud-img {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .content .clouddata .clouddata-list .cloud-img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+.content .clouddata .clouddata-list .cloud-title {
   font-size: 14px;
   color: #333333;
   font-weight: 550;
 }
-.content .clouddata .clouddata-classify .clouddata-type .cloudtype-content {
-  width: 258px;
+.content .clouddata .clouddata-list .cloud-content {
+  width: 100%;
   overflow: hidden;
   margin: 20px auto 0;
   font-size: 12px;
@@ -426,16 +502,61 @@ header .navbar .nav li a:hover {
   letter-spacing: 1px;
   line-height: 18px;
 }
-.content .clouddata .clouddata-classify .clouddata-type:hover {
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-  -webkit-transform: translate3d(0, 0px, -2px);
-  transform: translate3d(0, 1px, -2px);
+@media (max-width: 1240px) {
+  .content .clouddata .clouddata-list .cloud-content {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1240px) {
+  .content .clouddata .clouddata-list {
+    height: 235px;
+  }
+}
+@media (max-width: 991px) {
+  .content .clouddata .clouddata-list {
+    height: 145px;
+  }
+}
+@media (max-width: 400px) {
+  .content .clouddata .clouddata-list {
+    height: 180px;
+  }
+}
+@media (min-width: 992px) {
+  .content .clouddata .clouddata-list:hover {
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    -webkit-transform: translate3d(0, 0px, -2px);
+    transform: translate3d(0, 1px, -2px);
+  }
+}
+@media (max-width: 1240px) {
+  .content .clouddata {
+    margin-top: 145px;
+  }
+}
+@media (max-width: 991px) {
+  .content .clouddata {
+    height: 560px;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 750px) {
+  .content .clouddata {
+    height: 600px;
+    margin-top: 90px;
+  }
+}
+@media (max-width: 400px) {
+  .content .clouddata {
+    height: 590px;
+    margin-top: 70px;
+  }
 }
 .content .systemhome {
   width: 55%;
   height: 550px;
-  margin: 180px auto 0;
+  margin: 110px auto 0;
   position: relative;
 }
 .content .systemhome .systemhome-title {
@@ -451,39 +572,32 @@ header .navbar .nav li a:hover {
   top: -85px;
   left: 45%;
 }
-.content .systemhome .systemhome-classify {
-  width: 100%;
-  height: 100%;
-}
-.content .systemhome .systemhome-classify .systemhome-type {
-  width: 50%;
+.content .systemhome .system-list {
   height: 240px;
-  float: left;
-  transition: all 0.2s ease-in;
   display: flex;
   flex-direction: row;
+  transition: all 0.2s ease-in;
 }
-.content .systemhome .systemhome-classify .systemhome-type .systemtype-img {
-  width: 250px;
-  height: 178px;
-  margin-left: 26px;
-  margin-top: 51px;
+.content .systemhome .system-list .system-img {
+  width: 230px;
+  height: 170px;
+  margin-top: 50px;
 }
-.content .systemhome .systemhome-classify .systemhome-type .systemtype-img img {
+.content .systemhome .system-list .system-img img {
   width: 100%;
   height: 100%;
 }
-.content .systemhome .systemhome-classify .systemhome-type .systemtype-right {
-  margin-top: 51px;
+.content .systemhome .system-list .system-right {
+  margin-top: 50px;
   margin-left: 35px;
 }
-.content .systemhome .systemhome-classify .systemhome-type .systemtype-right .systemtype-title {
+.content .systemhome .system-list .system-right .system-title {
   font-size: 14px;
   color: #333333;
   font-weight: 550;
   margin-top: 19px;
 }
-.content .systemhome .systemhome-classify .systemhome-type .systemtype-right .systemtype-content {
+.content .systemhome .system-list .system-right .system-content {
   width: 187px;
   font-size: 12px;
   color: #666666;
@@ -492,7 +606,7 @@ header .navbar .nav li a:hover {
   font-family: "Noto Sans SC", sans-serif;
   letter-spacing: 1px;
 }
-.content .systemhome .systemhome-classify .systemhome-type:hover {
+.content .systemhome .system-list:hover {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
   -webkit-transform: translate3d(0, 0px, -2px);
