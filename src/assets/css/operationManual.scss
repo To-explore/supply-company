@@ -1,379 +1,552 @@
 @import "../../style/variables.scss";
-
-// 滚动条样式优化
+@import "../../style/mixins";
+// 滚动条样式优化: :
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 2em;
-    width: 6px;
-    background: rgba(#101f1c, 0.1);
+  border-radius: 2em;
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
 
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 2em;
-    min-height: 28px;
-    background-color: rgba(#101f1c, 0.5);
-    background-clip: padding-box;
+  border-radius: 2em;
+  min-height: 28px;
+  background-color: rgba(#101f1c, 0.5);
+  background-clip: padding-box;
 
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(#101f1c, 1);
+  background-color: rgba(#101f1c, 1);
 }
 
 /* 导航 */
 header {
-    .navbar {
-      margin-bottom: 0;
-      background-color: #04084f;
-      .logo {
-        width: 270px;
-        height: 50px;
-        display: flex;
+  .navbar {
+    margin-bottom: 0;
+    background-color: #04084f;
+    .logo {
+      width: 270px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+        height: 30px;
         align-items: center;
-        img {
-          width: 30px;
-          height: 30px;
-          align-items: center;
+      }
+    }
+    @media (max-width: 750px) {
+      .logo {
+        margin-left: 7.5px;
+      }
+      .navbar-toggle {
+        border: solid #fff 1px;
+        span {
+          border-bottom: 1px #fff solid;
         }
       }
-      @media (max-width: 750px) {
-        .logo {
-          margin-left: 7.5px;
-        }
-        .navbar-toggle {
-          border: solid #fff 1px;
-          span {
-            border-bottom: 1px #fff solid;
-          }
-        }
+    }
+    h1 {
+      float: left;
+      margin: 0;
+      width: 250px;
+      font-size: 16px;
+      font-family: "Ma Shan Zheng", cursive;
+      font-weight: 400;
+      color: #ffffff;
+      letter-spacing: 1px;
+      overflow: hidden;
+      border-right: 1px solid transparent;
+      margin-left: 5px;
+      white-space: nowrap;
+      animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+    }
+    @keyframes caret {
+      50% {
+        border-right-color: currentColor;
       }
-      h1 {
-        float: left;
-        margin: 0;
-        width: 250px;
-        font-size: 16px;
-        font-family: "Ma Shan Zheng", cursive;
-        font-weight: 400;
-        color: #ffffff;
-        letter-spacing: 1px;
-        overflow: hidden;
-        border-right: 1px solid transparent;
-        margin-left: 5px;
-        white-space: nowrap;
-        animation: typing 10s steps(36) 0s infinite backwards, caret 500ms steps(1) 0s infinite forwards;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
       }
-      @keyframes caret {
-        50% {
-          border-right-color: currentColor;
+    }
+    .nav {
+      li {
+        .active {
+          color: #e64e4e;
         }
-      }
-      @keyframes typing {
-        from {
-            width: 0;
+        a {
+          color: #ffffff;
+          font-size: 12px;
+          font-family: "Noto Sans SC", sans-serif;
+          letter-spacing: 0.5px;
+          font-weight: 400;
         }
-      }
-      .nav {
-        li {
-          .active {
-            color: #e64e4e;
-          }
+        @media (max-width: 970px) {
           a {
-            color: #ffffff;
+            padding: 12px 10px;
             font-size: 12px;
-            font-family: "Noto Sans SC", sans-serif;
-            letter-spacing: 0.5px;
-            font-weight: 400;
           }
-          @media (max-width: 970px) {
-            a {
-              padding: 12px 10px;
-              font-size: 12px;
-            }
+        }
+        @media (max-width: 750px) {
+          a {
+            text-align: center;
           }
-          @media (max-width: 750px) {
-            a {
-              text-align: center;
-            }
-          }
-          a:hover {
-            color: #ff9797;
-            background-color: #04084f;
-          }
+        }
+        a:hover {
+          color: #ff9797;
+          background-color: #04084f;
         }
       }
     }
-    @media (min-width: 768px) {
-      .navbar {
-        border-radius: 0;
-      }
+  }
+  @media (min-width: 768px) {
+    .navbar {
+      border-radius: 0;
     }
+  }
 }
-
 
 .banner {
-    width: 100%;
-    height: 243px;
-    background: url('../../image/operationManual/banner.png') no-repeat center center;
-    background-size: 100% 100%;
+  width: 100%;
+  height: 243px;
+  background: url("../../image/operationManual/banner.png") no-repeat center center;
+  background-size: 100% 100%;
 }
 @media (max-width: 1200px) {
-    .banner {
-        height: 180px;
-    }
+  .banner {
+    height: 180px;
+  }
 }
 @media (max-width: 750px) {
-    .banner {
-        height: 130px;
-    }
+  .banner {
+    height: 130px;
+  }
 }
 
 .content {
-    width: 100%;
-    .content-hover {
-        width: 50%;
-        height: 1965px;
-        margin: -125px auto 101px;
-        background-color: #fff;
-        -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.1);
-        box-shadow: 0 0 30px rgba(0,0,0,0.15);
-        padding-top: 49px;
-        .contenthov-title {
-            width: 100%;
-            height: 20px;
-            line-height: 20px;
-            text-align: center;
-            color: #04084F;
-            font-size: 18px;
-            .title-left {
-                display: inline-block;
-                margin-bottom: 8px;
-                width: 100px;
-                height: 1px;
-                background-color: #04084F;
-                position: relative; 
-                margin-right: 13px;
-                .title-leftone {
-                    display: inline-block;
-                    width: 60px;
-                    height: 1px;
-                    background-color: #04084F;
-                    position: absolute;
-                    top: 3px;
-                    left: 20px;
-                }
-                .title-leftone::after {
-                    content: "";
-                    border-radius: 50%;
-                    border: 2px solid #04084F;
-                    position: absolute;
-                    right: 0;
-                    top: -1.5px;
-                }
-            }
-            .title-left::after {
-                content: "";
-                border-radius: 50%;
-                border: 2px solid #04084F;
-                position: absolute;
-                right: 0;
-                top: -1.5px;
-            }
-            .title-right {
-                display: inline-block;
-                margin-bottom: 8px;
-                width: 100px;
-                height: 1px;
-                background-color: #04084F;
-                position: relative;
-                margin-left: 13px;
-                .title-rightone {
-                    display: inline-block;
-                    width: 60px;
-                    height: 1px;
-                    background-color: #04084F;
-                    position: absolute;
-                    top: 3px;
-                    right: 20px;
-                }
-                .title-rightone::before{
-                    content: "";
-                    border-radius: 50%;
-                    border: 2px solid #04084F;
-                    position: absolute;
-                    left: 0;
-                    top: -1.5px;
-                }
-            }
-            .title-right::before{
-                content: "";
-                border-radius: 50%;
-                border: 2px solid #04084F;
-                position: absolute;
-                left: 0;
-                top: -1.5px;
-            }
+  position: relative;
+  width: 78vw;
+  height: 2330px;
+  margin: 0 auto;
+  .content-body {
+    width: 78vw;
+    height: 2330px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -120px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 40px 0px rgba(4, 8, 79, 0.07);
+    .title-box {
+      width: 100%;
+      height: 20px;
+      text-align: center;
+      color: #04084f;
+      font-size: 18px;
+      margin-top: 20px;
+      .title-left {
+        display: inline-block;
+        margin-bottom: 8px;
+        width: 100px;
+        height: 1px;
+        background-color: #04084f;
+        position: relative;
+        margin-right: 13px;
+        @media (max-width: 375px) {
+          width: 70px;
         }
-        .content-talk {
-            margin-top: 8px;
-            padding-left: 89px;
-            padding-right: 71px;
-            li {
-                margin-top: 50px;
-                width: 100%;
-                height: 255px;
-                display: flex;
-                justify-content: space-between;
-                .talk-bgcblue { 
-                    background: url('../../image/operationManual/bgcBlue.png') no-repeat center center;
-                }
-                .talk-bgcred {
-                    background: url('../../image/operationManual/bgcRed.png') no-repeat center center; 
-                }
-                .talk-bgcdark {
-                    background: url('../../image/operationManual/bgcDarkGreen.png') no-repeat center center;
-                }
-                .talk-bgcyellow {
-                    background: url('../../image/operationManual/bgcYellow.png') no-repeat center center;
-                }
-                .talk-bgcgreen {
-                    background: url('../../image/operationManual/bgcGreen.png') no-repeat center center;
-                }
-                .talk-bgcviolet {
-                    background: url('../../image/operationManual/bgcViolet.png') no-repeat center center;
-                }
-                .talk-repeat {
-                    flex: 6;
-                    height: 100%;
-                    background-size: 100% 100%;
-                    position: relative;
-                    .talk-bgcpeopleL {
-                        position: absolute;
-                        left: 27px;
-                        bottom: -28px;
-                        width: 102px;
-                        height: 182px;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    .talk-bgcpeopleR {
-                        position: absolute;
-                        right: 27px;
-                        bottom: -28px;
-                        width: 102px;
-                        height: 182px;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    .talk-bgctitleL {
-                        margin: 50px 70px 105px 155px;
-                        color: #333333;
-                        font-size: 12px;
-                        font-family: "Noto Sans SC", sans-serif;
-                        line-height: 18px;
-                        letter-spacing: 1px;
-                        .talk-download {
-                            margin-top: 20px;
-                            width: 151px;
-                            height: 35px;
-                            line-height: 35px;
-                            text-align: center;
-                            border-radius: 30px;
-                            background-color: #E64E4E;
-                            color: #fff;
-                            font-size: 12px;
-                            cursor: pointer;
-                            img {
-                                width: 11px;
-                                height: 11px;
-                            }
-                        }
-                    }
-                    .talk-bgctitleR {
-                        margin: 50px 155px 105px 70px;
-                        color: #333333;
-                        font-size: 12px;
-                        font-family: "Noto Sans SC", sans-serif;
-                        line-height: 18px;
-                        letter-spacing: 1px;
-                        .talk-download {
-                            float: right;
-                            margin-top: 20px;
-                            width: 151px;
-                            height: 35px;
-                            line-height: 35px;
-                            text-align: center;
-                            border-radius: 30px;
-                            background-color: #E64E4E;
-                            color: #fff;
-                            font-size: 12px;
-                            cursor: pointer;
-                            img {
-                                width: 11px;
-                                height: 11px;
-                            }
-                        }
-                    }
-                } 
-                .talk-avatar {
-                    flex: 1;
-                    height: 116px;
-                    border-radius: 50%;
-                    margin: auto 0;
-                    position: relative;
-                    img {
-                        position: absolute;
-                        right: 0;
-                        top: 10%;
-                        width: 80%;
-                        height: 80%;
-                    }
-                }
-                .talk-avatarL {
-                    flex: 1;
-                    height: 116px;
-                    border-radius: 50%;
-                    margin: auto 0;
-                    position: relative;
-                    img {
-                        position: absolute;
-                        left: 0;
-                        top: 10%;
-                        width: 80%;
-                        height: 80%;
-                    }
-                }
-            }
+        .title-leftone {
+          display: inline-block;
+          width: 60px;
+          height: 1px;
+          background-color: #04084f;
+          position: absolute;
+          top: 4px;
+          left: 20px;
         }
+        .title-leftone::after {
+          content: "";
+          border-radius: 50%;
+          border: 2px solid #04084f;
+          position: absolute;
+          right: 0;
+          top: -1.5px;
+        }
+      }
+      .title-left::after {
+        content: "";
+        border-radius: 50%;
+        border: 2px solid #04084f;
+        position: absolute;
+        right: 0;
+        top: -1.5px;
+      }
+      .title-text {
+        font-size: 16px;
+        @media (max-width: 750px) {
+          font-size: 8px;
+        }
+      }
+      .title-right {
+        display: inline-block;
+        margin-bottom: 8px;
+        width: 100px;
+        height: 1px;
+        background-color: #04084f;
+        position: relative;
+        margin-left: 13px;
+        @media (max-width: 375px) {
+          width: 70px;
+        }
+        .title-rightone {
+          display: inline-block;
+          width: 60px;
+          height: 1px;
+          background-color: #04084f;
+          position: absolute;
+          top: 4px;
+          right: 20px;
+        }
+        .title-rightone::before {
+          content: "";
+          border-radius: 50%;
+          border: 2px solid #04084f;
+          position: absolute;
+          left: 0;
+          top: -1.5px;
+        }
+      }
+      .title-right::before {
+        content: "";
+        border-radius: 50%;
+        border: 2px solid #04084f;
+        position: absolute;
+        left: 0;
+        top: -1.5px;
+      }
     }
+    // 销售
+    .word-content-xs {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 60px 0 80px;
+        background-image: url("../../image/operationManual/bgcBlue.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-left;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          left: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    // 采购
+    .word-content-cg {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 80px 0 60px;
+        background-image: url("../../image/operationManual/bgcRed.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-right;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          right: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    // 派车
+    .word-content-pc {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 60px 0 80px;
+        background-image: url("../../image/operationManual/bgcGreen.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-left;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          left: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    // 发货
+    .word-content-fh {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 80px 0 60px;
+        background-image: url("../../image/operationManual/bgcYellow.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-right;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          right: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    // 仓库
+    .word-content-ck {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 60px 0 80px;
+        background-image: url("../../image/operationManual/bgcDarkGreen.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-left;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          left: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    // 管理
+    .word-content-gl {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10%;
+      .content-box {
+        flex: 10;
+        height: 310px;
+        padding: 0 80px 0 60px;
+        background-image: url("../../image/operationManual/bgcViolet.png");
+        position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include dw-button-right;
+        .content-text {
+          width: 40vw;
+          font-size: 12px;
+        }
+        img {
+          position: absolute;
+          right: 2%;
+          bottom: -10%;
+        }
+      }
+      .user-image-box {
+        flex: 1;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        span {
+          margin-top: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 // footer start
 .record-information {
-    width: 100%;
-    height: 50px;
-    background-color: $nav-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    span {
-      font-size: 10px;
-      font-family: "Noto Sans SC", sans-serif;
-      font-weight: 500;
-      color: #ffffff;
-    }
+  width: 100%;
+  height: 50px;
+  background-color: $nav-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 10px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+  }
 }
 // footer end
