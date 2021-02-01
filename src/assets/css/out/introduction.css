@@ -154,6 +154,21 @@ header .navbar .nav li a:hover {
   top: -16px;
   left: 41%;
 }
+@media (max-width: 750px) {
+  .content .business .bussiness-title {
+    left: 39%;
+  }
+}
+@media (max-width: 470px) {
+  .content .business .bussiness-title {
+    left: 34%;
+  }
+}
+@media (max-width: 375px) {
+  .content .business .bussiness-title {
+    left: 30%;
+  }
+}
 .content .business .bussiness-classify {
   display: flex;
   padding-left: 0;
@@ -191,14 +206,31 @@ header .navbar .nav li a:hover {
 }
 @media (max-width: 1240px) {
   .content .business .bussiness-classify .bussiness-type .busstype-img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 }
 @media (max-width: 940px) {
   .content .business .bussiness-classify .bussiness-type .busstype-img {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 470px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-img {
+    width: 35px;
+    height: 30px;
+  }
+}
+@media (max-width: 375px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-img {
+    display: none;
   }
 }
 .content .business .bussiness-classify .bussiness-type .busstype-right {
@@ -219,6 +251,18 @@ header .navbar .nav li a:hover {
     margin-top: 15px;
   }
 }
+@media (max-width: 750px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-title {
+    margin-top: 0;
+    height: 25px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 470px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-title {
+    height: 20px;
+  }
+}
 .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-content {
   width: 183px;
   font-size: 12px;
@@ -231,6 +275,12 @@ header .navbar .nav li a:hover {
 @media (max-width: 1240px) {
   .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-content {
     width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-right .busstype-content {
+    margin-top: 0;
+    height: 25px;
   }
 }
 @media (max-width: 1456px) {
@@ -248,6 +298,11 @@ header .navbar .nav li a:hover {
     margin-left: 20px;
   }
 }
+@media (max-width: 470px) {
+  .content .business .bussiness-classify .bussiness-type .busstype-right {
+    margin-left: 10px;
+  }
+}
 @media (max-width: 1700px) {
   .content .business .bussiness-classify .bussiness-type {
     padding-left: 2%;
@@ -261,7 +316,7 @@ header .navbar .nav li a:hover {
 @media (max-width: 1240px) {
   .content .business .bussiness-classify .bussiness-type {
     flex: none;
-    width: 400px;
+    width: 340px;
     height: 80px;
     padding-left: 0;
     margin: 0 auto 10px;
@@ -269,8 +324,20 @@ header .navbar .nav li a:hover {
 }
 @media (max-width: 940px) {
   .content .business .bussiness-classify .bussiness-type {
+    width: 310px;
     height: 70px;
-    width: 340px;
+  }
+}
+@media (max-width: 750px) {
+  .content .business .bussiness-classify .bussiness-type {
+    width: 65%;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .content .business .bussiness-classify .bussiness-type {
+    width: 75%;
   }
 }
 @media (max-width: 1240px) {
@@ -284,6 +351,11 @@ header .navbar .nav li a:hover {
     height: 240px;
   }
 }
+@media (max-width: 750px) {
+  .content .business .bussiness-classify {
+    height: 210px;
+  }
+}
 @media (max-width: 1240px) {
   .content .business {
     width: 50%;
@@ -294,6 +366,12 @@ header .navbar .nav li a:hover {
 @media (max-width: 940px) {
   .content .business {
     height: 530px;
+  }
+}
+@media (max-width: 750px) {
+  .content .business {
+    width: 65%;
+    height: 465px;
   }
 }
 .content .clouddata {
