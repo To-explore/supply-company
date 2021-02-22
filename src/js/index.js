@@ -66,6 +66,17 @@ $(function () {
 })
 
 /*---------返回顶部 end----------*/
+
+/*---------打开备案网址----------*/
+$("#recordSearch").click(function() {
+    // window.location.href = "https://beian.miit.gov.cn/#/Integrated/index";
+    window.open("https://beian.miit.gov.cn/#/Integrated/index");
+})
+
+/*---------打开备案网址 end----------*/
+
+
+
 let nums1 = [1,2,2,1];
 let nums2 = [2,2];
 let num = [];
