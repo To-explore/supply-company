@@ -1,6 +1,6 @@
 /*
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-02-25 15:43:17
+ * @LastEditTime: 2021-02-25 16:57:27
  */
 /*---------download buttonXs----------*/
 // ammount to add on each buttonXs press
@@ -196,6 +196,7 @@ renderXs = () => {
 
 // cycle through buttonXs states when clicked
 clickButtonXs = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/销售-操作手册.doc', '_self')
   if (!disabledXs) {
     disabledXs = true
     // Loading stage
@@ -421,6 +422,8 @@ renderCg = () => {
 
 // cycle through buttonCg states when clicked
 clickButtonCg = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/采购-操作手册.doc', '_self')
+
   if (!disabledCg) {
     disabledCg = true
     // Loading stage
@@ -646,6 +649,7 @@ renderPc = () => {
 
 // cycle through buttonPc states when clicked
 clickButtonPc = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/派车-操作手册.doc', '_self')
   if (!disabledPc) {
     disabledPc = true
     // Loading stage
@@ -871,6 +875,7 @@ renderFh = () => {
 
 // cycle through buttonFh states when clicked
 clickButtonFh = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/发货-操作手册.doc', '_self')
   if (!disabledFh) {
     disabledFh = true
     // Loading stage
@@ -1096,6 +1101,7 @@ renderCk = () => {
 
 // cycle through buttonCk states when clicked
 clickButtonCk = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/仓库-操作手册.doc', '_self')
   if (!disabledCk) {
     disabledCk = true
     // Loading stage
@@ -1153,7 +1159,6 @@ window.initBurstCk()
 renderCk()
 
 /*-------------财务按钮--------------*/
-/*----------- 管理按钮 ------------*/
 // init other global elements
 var disabledCw = false
 const buttonCw = document.getElementById('button-cw')
@@ -1322,6 +1327,7 @@ renderCw = () => {
 
 // cycle through buttonCw states when clicked
 clickButtonCw = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/财务_操作手册.doc', '_self')
   if (!disabledCw) {
     disabledCw = true
     // Loading stage
@@ -1546,6 +1552,7 @@ renderGl = () => {
 
 // cycle through buttonGl states when clicked
 clickButtonGl = () => {
+  window.open('https://supply-company.oss-cn-shanghai.aliyuncs.com/Operation Manual/管理员-操作手册.docx', '_self')
   if (!disabledGl) {
     disabledGl = true
     // Loading stage
