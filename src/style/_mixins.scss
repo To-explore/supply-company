@@ -32,7 +32,7 @@
     caret 500ms steps(1) #{$delay}s infinite forwards;
 }
 
-@mixin dw-button-left {
+@mixin dw-button {
   @keyframes loading {
     0% {
       cy: 10;
@@ -47,35 +47,22 @@
 
   canvas {
     position: absolute;
-    left: -5%;
-    top: 25%;
+    left: -170%;
+    top: 0;
     z-index: 2;
-    width: 60%;
+    width: 430%;
     pointer-events: none;
   }
 
   button {
     overflow: hidden;
     position: absolute;
-    left: 21%;
-    top: 80%;
-    @media (max-width: 1700px) {
-      left: 24%;
-    }
-    @media (max-width: 1490px) {
-      left: 28%;
-    }
-    @media (max-width: 1300px) {
-      left: 34%;
-    }
-    @media (max-width: 940px) and (min-width: 375px) {
-      left: 50%;
-      top: 120%;
-    }
+    left: 50%;
+    top: 145%;
     z-index: 1;
     padding: 0 10px;
     border: none;
-    width: 190px;
+    width: 130px;
     height: 40px;
     outline: none;
     background: none;

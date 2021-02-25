@@ -1,6 +1,6 @@
 /*
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-02-01 18:19:33
+ * @LastEditTime: 2021-02-25 15:43:17
  */
 /*---------download buttonXs----------*/
 // ammount to add on each buttonXs press
@@ -1152,6 +1152,231 @@ textElements.forEach((element) => {
 window.initBurstCk()
 renderCk()
 
+/*-------------财务按钮--------------*/
+/*----------- 管理按钮 ------------*/
+// init other global elements
+var disabledCw = false
+const buttonCw = document.getElementById('button-cw')
+const canvasCw = document.getElementById('canvas-cw')
+const ctxCw = canvasCw.getContext('2d')
+canvasCw.width = window.innerWidth
+canvasCw.height = window.innerHeight
+let cxCw = ctxCw.canvas.width / 2
+let cyCw = ctxCw.canvas.height / 2
+
+// add ConfettoCw/SequinCw objects to arrays to draw them
+let confettiCw = []
+let sequinsCw = []
+
+
+// helper function to pick a random number within a range
+randomRangeCw = (min, max) => Math.random() * (max - min) + min
+
+// helper function to get initial velocities for confettiCw
+// this weighted spread helps the confettiCw look more realistic
+initConfettoVelocityCw = (xRange, yRange) => {
+  const x = randomRangeCw(xRange[0], xRange[1])
+  const range = yRange[1] - yRange[0] + 1
+  let y = yRange[1] - Math.abs(randomRangeCw(0, range) + randomRangeCw(0, range) - range)
+  if (y >= yRange[1] - 1) {
+    // Occasional ConfettoCw goes higher than the max
+    y += (Math.random() < .25) ? randomRangeCw(1, 3) : 0
+  }
+  return {
+    x: x,
+    y: -y
+  }
+}
+
+// ConfettoCw Class
+function ConfettoCw() {
+  this.randomModifier = randomRangeCw(0, 99)
+  this.color = colors[Math.floor(randomRangeCw(0, colors.length))]
+  this.dimensions = {
+    x: randomRangeCw(5, 9),
+    y: randomRangeCw(8, 15),
+  }
+  this.position = {
+    x: randomRangeCw(canvasCw.width / 2 - buttonCw.offsetWidth / 4, canvasCw.width / 2 + buttonCw.offsetWidth / 4),
+    y: randomRangeCw(canvasCw.height / 2 + buttonCw.offsetHeight / 2 + 8, canvasCw.height / 2 + (1.5 * buttonCw.offsetHeight) - 8),
+  }
+  this.rotation = randomRangeCw(0, 2 * Math.PI)
+  this.scale = {
+    x: 1,
+    y: 1,
+  }
+  this.velocity = initConfettoVelocityCw([-9, 9], [6, 11])
+}
+ConfettoCw.prototype.update = function () {
+  // apply forces to velocity
+  this.velocity.x -= this.velocity.x * dragConfetti
+  this.velocity.y = Math.min(this.velocity.y + gravityConfetti, terminalVelocity)
+  this.velocity.x += Math.random() > 0.5 ? Math.random() : -Math.random()
+
+  // set position
+  this.position.x += this.velocity.x
+  this.position.y += this.velocity.y
+
+  // spin ConfettoCw by scaling y and set the color, .09 just slows cosine frequency
+  this.scale.y = Math.cos((this.position.y + this.randomModifier) * 0.09)
+}
+
+// SequinCw Class
+function SequinCw() {
+  this.color = colors[Math.floor(randomRangeCw(0, colors.length))].back,
+    this.radius = randomRangeCw(1, 2),
+    this.position = {
+      x: randomRangeCw(canvasCw.width / 2 - buttonCw.offsetWidth / 3, canvasCw.width / 2 + buttonCw.offsetWidth / 3),
+      y: randomRangeCw(canvasCw.height / 2 + buttonCw.offsetHeight / 2 + 8, canvasCw.height / 2 + (1.5 * buttonCw.offsetHeight) - 8),
+    },
+    this.velocity = {
+      x: randomRangeCw(-6, 6),
+      y: randomRangeCw(-8, -12)
+    }
+}
+SequinCw.prototype.update = function () {
+  // apply forces to velocity
+  this.velocity.x -= this.velocity.x * dragSequins
+  this.velocity.y = this.velocity.y + gravitySequins
+
+  // set position
+  this.position.x += this.velocity.x
+  this.position.y += this.velocity.y
+}
+
+// add elements to arrays to be drawn
+initBurstCw = () => {
+  for (let i = 0; i < confettiCount; i++) {
+    confettiCw.push(new ConfettoCw())
+  }
+  for (let i = 0; i < sequinCount; i++) {
+    sequinsCw.push(new SequinCw())
+  }
+}
+
+// draws the elements on the canvas
+renderCw = () => {
+  ctxCw.clearRect(0, 0, canvasCw.width, canvasCw.height)
+
+  confettiCw.forEach((ConfettoCw, index) => {
+    let width = (ConfettoCw.dimensions.x * ConfettoCw.scale.x)
+    let height = (ConfettoCw.dimensions.y * ConfettoCw.scale.y)
+
+    // move canvas to position and rotate
+    ctxCw.translate(ConfettoCw.position.x, ConfettoCw.position.y)
+    ctxCw.rotate(ConfettoCw.rotation)
+
+    // update ConfettoCw "physics" values
+    ConfettoCw.update()
+
+    // get front or back fill color
+    ctxCw.fillStyle = ConfettoCw.scale.y > 0 ? ConfettoCw.color.front : ConfettoCw.color.back
+
+    // draw ConfettoCw
+    ctxCw.fillRect(-width / 2, -height / 2, width, height)
+
+    // reset transform matrix
+    ctxCw.setTransform(1, 0, 0, 1, 0, 0)
+
+    // clear rectangle where buttonCw cuts off
+    if (ConfettoCw.velocity.y < 0) {
+      ctxCw.clearRect(canvasCw.width / 2 - buttonCw.offsetWidth / 2, canvasCw.height / 2 + buttonCw.offsetHeight / 2, buttonCw.offsetWidth, buttonCw.offsetHeight)
+    }
+  })
+
+  sequinsCw.forEach((SequinCw, index) => {
+    // move canvas to position
+    ctxCw.translate(SequinCw.position.x, SequinCw.position.y)
+
+    // update SequinCw "physics" values
+    SequinCw.update()
+
+    // set the color
+    ctxCw.fillStyle = SequinCw.color
+
+    // draw SequinCw
+    ctxCw.beginPath()
+    ctxCw.arc(0, 0, SequinCw.radius, 0, 2 * Math.PI)
+    ctxCw.fill()
+
+    // reset transform matrix
+    ctxCw.setTransform(1, 0, 0, 1, 0, 0)
+
+    // clear rectangle where buttonCw cuts off
+    if (SequinCw.velocity.y < 0) {
+      ctxCw.clearRect(canvasCw.width / 2 - buttonCw.offsetWidth / 2, canvasCw.height / 2 + buttonCw.offsetHeight / 2, buttonCw.offsetWidth, buttonCw.offsetHeight)
+    }
+  })
+
+  // remove confettiCw and sequinsCw that fall off the screen
+  // must be done in seperate loops to avoid noticeable flickering
+  confettiCw.forEach((ConfettoCw, index) => {
+    if (ConfettoCw.position.y >= canvasCw.height) confettiCw.splice(index, 1)
+  })
+  sequinsCw.forEach((SequinCw, index) => {
+    if (SequinCw.position.y >= canvasCw.height) sequinsCw.splice(index, 1)
+  })
+
+  window.requestAnimationFrame(renderCw)
+}
+
+// cycle through buttonCw states when clicked
+clickButtonCw = () => {
+  if (!disabledCw) {
+    disabledCw = true
+    // Loading stage
+    buttonCw.classList.add('loading')
+    buttonCw.classList.remove('ready')
+    setTimeout(() => {
+      // Completed stage
+      buttonCw.classList.add('complete')
+      buttonCw.classList.remove('loading')
+      setTimeout(() => {
+        window.initBurstCw()
+        setTimeout(() => {
+          // Reset buttonCw so user can select it again
+          disabledCw = false
+          buttonCw.classList.add('ready')
+          buttonCw.classList.remove('complete')
+        }, 4000)
+      }, 320)
+    }, 1800)
+  }
+}
+
+// re-init canvas if the window size changes
+resizeCanvasCw = () => {
+  canvasCw.width = window.innerWidth
+  canvasCw.height = window.innerHeight
+  cxCw = ctxCw.canvas.width / 2
+  cyCw = ctxCw.canvas.height / 2
+}
+
+// resize listenter
+window.addEventListener('resize', () => {
+  resizeCanvasCw()
+})
+
+// click buttonCw on spacebar or return keypress
+document.body.onkeyup = (e) => {
+  if (e.keyCode == 13 || e.keyCode == 32) {
+    clickButtonCw()
+  }
+}
+// Set up buttonCw text transition timings on page load
+textElements = buttonCw.querySelectorAll('.button-text')
+textElements.forEach((element) => {
+  characters = element.innerText.split('')
+  let characterHTML = ''
+  characters.forEach((letter, index) => {
+    characterHTML += `<span class="char${index}" style="--d:${index * 30}ms; --dr:${(characters.length - index - 1) * 30}ms;">${letter}</span>`
+  })
+  element.innerHTML = characterHTML
+})
+
+// kick off the renderCw loop
+window.initBurstCw()
+renderCw()
 /*----------- 管理按钮 ------------*/
 // init other global elements
 var disabledGl = false

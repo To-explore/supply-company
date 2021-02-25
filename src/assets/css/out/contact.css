@@ -111,8 +111,8 @@ header .navbar .nav li a:hover {
 /* banner */
 .banner {
   width: 100%;
-  height: 260px;
-  background: url("../../image/contact/banner.png") no-repeat center center;
+  height: 560px;
+  background: url("https://supply-company.oss-cn-shanghai.aliyuncs.com/image/bannerThree.png") no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -140,7 +140,7 @@ header .navbar .nav li a:hover {
 .content .content-feedback .feedback-top {
   width: 100%;
   height: 75px;
-  background-color: #F4BD42;
+  background-color: #f4bd42;
   position: relative;
 }
 .content .content-feedback .feedback-top .feedback-img {
@@ -254,9 +254,9 @@ header .navbar .nav li a:hover {
   position: fixed;
   right: 2px;
   top: 65%;
-  -webkit-box-shadow: #DDD 0px 1px 5px;
-  -moz-box-shadow: #DDD 0px 1px 5px;
-  box-shadow: #DDD 0px 1px 5px;
+  -webkit-box-shadow: #ddd 0px 1px 5px;
+  -moz-box-shadow: #ddd 0px 1px 5px;
+  box-shadow: #ddd 0px 1px 5px;
   z-index: 999;
 }
 
@@ -280,7 +280,7 @@ header .navbar .nav li a:hover {
   font-size: 18px;
   text-align: center;
   display: none;
-  box-shadow: #DDD -1px 1px 4px;
+  box-shadow: #ddd -1px 1px 4px;
 }
 
 .izl-rmenu a.consult:hover .phone {
@@ -296,7 +296,7 @@ header .navbar .nav li a:hover {
   width: 16px;
   font-size: 12px;
   line-height: 16px;
-  color: #45BDFF;
+  color: #45bdff;
   text-align: center;
   padding-top: 15px;
   padding-right: 34px;
@@ -344,9 +344,9 @@ header .navbar .nav li a:hover {
   right: 2px;
   top: 65%;
   margin-top: -76px;
-  -webkit-box-shadow: #DDD 0px -1px 5px;
-  -moz-box-shadow: #DDD 0px -1px 5px;
-  box-shadow: #DDD 0px -1px 5px;
+  -webkit-box-shadow: #ddd 0px -1px 5px;
+  -moz-box-shadow: #ddd 0px -1px 5px;
+  box-shadow: #ddd 0px -1px 5px;
   cursor: pointer;
   background-image: url(../../image/test/consult_icon.gif);
   background-repeat: no-repeat;
@@ -354,10 +354,11 @@ header .navbar .nav li a:hover {
   display: block;
   height: 76px;
   width: 82px;
-  background-color: #FFF !important;
+  background-color: #fff !important;
   z-index: 999;
 }
 
-.udesk-feedback-tab-left, .izl-rmenu {
+.udesk-feedback-tab-left,
+.izl-rmenu {
   opacity: 0.9;
 }
