@@ -118,12 +118,12 @@ header .navbar .nav li a:hover {
 
 @media (max-width: 1024px) {
   .banner {
-    height: 200px;
+    height: 400px;
   }
 }
 @media (max-width: 750px) {
   .banner {
-    height: 150px;
+    height: 250px;
   }
 }
 /* 系统介绍 */
@@ -131,16 +131,27 @@ header .navbar .nav li a:hover {
   margin: 230px 0 40px 0;
   width: 100%;
 }
+@media (max-width: 1200px) {
+  .introduction {
+    margin: 40px 0 40px 0;
+  }
+}
 .introduction .box-introduction {
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  border-radius: 5px;
   width: 1200px;
   height: 400px;
   background-color: #f2f2f3;
-  border-radius: 5px;
+}
+@media (max-width: 1200px) {
+  .introduction .box-introduction {
+    justify-content: center;
+    width: 100%;
+  }
 }
 .introduction .box-introduction .img-box {
   display: flex;
@@ -151,10 +162,15 @@ header .navbar .nav li a:hover {
   align-items: center;
   height: 100%;
 }
+@media (max-width: 1200px) {
+  .introduction .box-introduction .img-box {
+    display: none;
+  }
+}
 .introduction .box-introduction .img-box img {
+  border-radius: 5px;
   width: 650px;
   height: 430px;
-  border-radius: 5px;
 }
 .introduction .box-introduction .description-box {
   width: 470px;
@@ -176,6 +192,11 @@ header .navbar .nav li a:hover {
   font-size: 14px;
   color: #333;
 }
+@media (max-width: 1200px) {
+  .introduction .box-introduction .description-box .text-box {
+    padding: 0 35px 0 35px;
+  }
+}
 .introduction .box-introduction .description-box .text-box p {
   line-height: 18px;
   text-indent: 25px;
@@ -194,6 +215,12 @@ header .navbar .nav li a:hover {
   margin: 0 auto;
   width: 1200px;
   height: 350px;
+}
+@media (max-width: 1200px) {
+  .features-section .box-features {
+    width: 100%;
+    height: 1300px;
+  }
 }
 .features-section .box-features .description-box {
   width: 100%;
@@ -216,11 +243,21 @@ header .navbar .nav li a:hover {
   font-size: 14px;
   color: #666;
 }
+@media (max-width: 1200px) {
+  .features-section .box-features .description-box .description-text {
+    padding: 0 35px 0 35px;
+  }
+}
 .features-section .box-features .img-box {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1200px) {
+  .features-section .box-features .img-box {
+    flex-direction: column;
+  }
 }
 .features-section .box-features .img-box .box-list {
   display: flex;
@@ -230,6 +267,11 @@ header .navbar .nav li a:hover {
   align-items: center;
   flex: 1;
   height: 100%;
+}
+@media (max-width: 1200px) {
+  .features-section .box-features .img-box .box-list {
+    height: 300px;
+  }
 }
 .features-section .box-features .img-box .box-list .box-top {
   flex: 5;
@@ -428,12 +470,25 @@ header .navbar .nav li a:hover {
   background-position-x: -2px;
   background-size: 100% 100%;
 }
+@media (max-width: 1200px) {
+  .suolomo {
+    height: 800px;
+  }
+}
 .suolomo .suolomo-box {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
   width: 1200px;
   height: 100%;
-  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .suolomo .suolomo-box .image-box {
   display: flex;
@@ -443,23 +498,39 @@ header .navbar .nav li a:hover {
   width: 445px;
   height: 405px;
 }
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box .image-box img {
+    width: 345px;
+    height: 305px;
+  }
+}
 .suolomo .suolomo-box .content-box {
-  flex: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
   margin: 0 0 0 60px;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box .content-box {
+    margin: 10px 10px 10px 10px;
+  }
 }
 .suolomo .suolomo-box .content-box .content-title {
-  font-size: 20px;
   font-weight: 500;
-  color: #ffffff;
+  font-size: 20px;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box .content-box .content-title {
+    text-align: center;
+  }
 }
 .suolomo .suolomo-box .content-box .content-title .point {
   margin: 0 5px 0 5px;
-  font-size: 25px;
   font-weight: 600;
+  font-size: 25px;
 }
 .suolomo .suolomo-box .content-box .content-logo {
   margin: 40px 0 0 0;
@@ -471,10 +542,15 @@ header .navbar .nav li a:hover {
 .suolomo .suolomo-box .content-box .content-text {
   margin: 20px 0 0 0;
 }
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box .content-box .content-text {
+    padding: 0 35px 0 35px;
+  }
+}
 .suolomo .suolomo-box .content-box .content-text span {
-  font-size: 14px;
   font-weight: 400;
-  color: #ffffff;
+  font-size: 14px;
+  color: #fff;
 }
 .suolomo .suolomo-box .content-box .content-button {
   margin: 60px 0 0 0;
@@ -492,6 +568,11 @@ header .navbar .nav li a:hover {
   font-size: 14px;
   color: #fff;
   letter-spacing: 2px;
+}
+@media (max-width: 1200px) {
+  .suolomo .suolomo-box .content-box .content-button .operation {
+    margin: 0 35px 0 35px;
+  }
 }
 .suolomo .suolomo-box .content-box .content-button .operation img {
   width: 20px;
@@ -523,6 +604,12 @@ header .navbar .nav li a:hover {
   width: 1200px;
   height: 400px;
 }
+@media (max-width: 1200px) {
+  .operationManual-section .box-operationManual {
+    width: 100%;
+    height: auto;
+  }
+}
 .operationManual-section .box-operationManual .description-box {
   width: 100%;
 }
@@ -544,53 +631,55 @@ header .navbar .nav li a:hover {
   font-size: 14px;
   color: #666;
 }
+@media (max-width: 1200px) {
+  .operationManual-section .box-operationManual .description-box .description-text {
+    padding: 0 35px 0 35px;
+  }
+}
 .operationManual-section .box-operationManual .box-manual {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+  width: 100%;
+  height: 100%;
 }
 .operationManual-section .box-operationManual .box-manual .manual-list {
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 50px 0 0 0;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .operationManual-section .box-operationManual .box-manual .manual-list {
+    flex-direction: column;
+    display: block;
+    padding: 0;
+  }
 }
 .operationManual-section .box-operationManual .box-manual .manual-list .list {
-  flex: 1;
+  overflow: hidden;
   list-style: none;
-  height: 125px;
-  box-shadow: 0px 0px 10px 0px rgba(4, 8, 79, 0.07);
+  flex: 1;
   margin: 0 10px 0 0;
   border-radius: 5px;
+  height: 125px;
+  box-shadow: 0 0 10px 0 rgba(4, 8, 79, 0.07);
   transition: all 0.6s steps(100);
-  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .operationManual-section .box-operationManual .box-manual .manual-list .list {
+    margin: 10px 0 0 0;
+  }
 }
 .operationManual-section .box-operationManual .box-manual .manual-list .list .list-box {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100%;
   /* Website Link */
-}
-.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 13px 0 0 0;
-}
-.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box img {
-  width: 70px;
-}
-.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box span {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333333;
-  margin-top: 10px;
 }
 @keyframes loading {
   0% {
@@ -780,6 +869,21 @@ header .navbar .nav li a:hover {
   line-height: 7px;
   font-size: 7px;
   color: #8aa8c5;
+}
+.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 13px 0 0 0;
+}
+.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box img {
+  width: 70px;
+}
+.operationManual-section .box-operationManual .box-manual .manual-list .list .list-box .user-box span {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
 }
 .operationManual-section .box-operationManual .box-manual .manual-list .list:hover {
   height: 220px;
